@@ -1,0 +1,151 @@
+/* ===== IMPOSTAZIONI GENERALI E FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Sorts+Mill+Goudy&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+background: linear-gradient(to bottom right, #0a0a14, #000000);
+    color: #f2f2f2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-container {
+    display: flex;
+}
+
+/* ===== SIDEBAR DI NAVIGAZIONE (SINISTRA) ===== */
+.sidebar {
+    flex: 0 0 250px;
+background: linear-gradient(to bottom right, #0a0a14, #000000);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin-top: 3rem;
+}
+
+.main-nav ul li {
+    margin-bottom: 0.8rem;
+}
+
+.main-nav ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    color: #8c52ff;
+}
+
+.main-nav ul li.active > a {
+    color: #8c52ff;
+}
+
+.submenu {
+    list-style-type: none;
+    display: none;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.submenu li a {
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== HEADER (MODIFICATO) ===== */
+.content-header {
+    background: linear-gradient(to bottom, #222222, #000000);
+    padding: 2.5rem 4rem;
+}
+
+.content-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #f2f2f2;
+    margin-bottom: 0;
+    text-align: center;
+    font-style: italic;
+}
+
+/* ===== CONTENUTO PRINCIPALE (MODIFICATO) ===== */
+.content {
+    flex: 1;
+    padding: 2.5rem 4rem;
+    background: linear-gradient(to bottom right, #0a0a14, #000000);
+}
+
+.content h2 {
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 2.2rem;
+    color: #f2f2f2;
+    margin-top: 2.5rem; /* Aggiunto per ricreare lo spazio che c'era prima */
+    margin-bottom: 2rem;
+}
+
+/* Sezione Ricette */
+.ricette-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    align-items: start;
+    margin-bottom: 4rem;
+}
+
+.recipe-card {
+    text-align: center;
+}
+
+.recipe-card img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.recipe-card h3 {
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 1.2rem;
+    color: #f2f2f2;
+}
+
+/* Sezione Statistiche */
+.statistiche-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.stat-card {
+    width: 180px;
+    height: 180px;
+    background-color: #000000;
+    border-radius: 20px;
+}
+
+/* ===== FOOTER (MODIFICATO) ===== */
+.main-footer {
+    background-color: #474747;
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid #666;
+    font-family: 'Sorts Mill Goudy', serif;
+    color: #aaa;
+    width: 100%;
+}
+
+.main-footer p {
+    margin-bottom: 0.5rem;
+}
