@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ricette Apparecchiate | Home</title>
-
+    
     <link rel="stylesheet" href="style.css">
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Sorts+Mill+Goudy&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Montserrat:wght@400;700&family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="content-header">
+    <header class="hero-header">
         <h1>RICETTE APPARECCHIATE</h1>
     </header>
 
@@ -23,7 +23,7 @@
             <nav class="main-nav">
                 <ul>
                     <li class="active"><a href="#">HOME</a></li>
-
+                    
                     <li class="has-submenu">
                         <a href="#">GESTIONE LIBRI</a>
                         <ul class="submenu">
@@ -33,7 +33,7 @@
                             <li><a href="#">MODIFICA LIBRO</a></li>
                         </ul>
                     </li>
-
+                    
                     <li class="has-submenu">
                         <a href="#">GESTIONE ARCHIVIO</a>
                         <ul class="submenu">
@@ -47,16 +47,16 @@
         </aside>
 
         <main class="content">
-
+            
             <section class="results-section">
                 <h2>Le Ricette più Pubblicate</h2>
                 <div class="ricette-container">
                     <article class="recipe-card">
-                        <img src="" alt="Immagine Lasagne alla Bolognese">
+                        <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Immagine Lasagne alla Bolognese">
                         <h3>Lasagne alla Bolognese</h3>
                     </article>
                     <article class="recipe-card">
-                        <img src="" alt="Immagine Tiramisù">
+                        <img src="https://images.pexels.com/photos/5848545/pexels-photo-5848545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Immagine Tiramisù">
                         <h3>Tiramisù</h3>
                     </article>
                     <article class="recipe-card">
@@ -69,9 +69,13 @@
             <section class="stats-section">
                 <h2>Statistiche Veloci</h2>
                 <div class="statistiche-container">
-                    <div class="stat-card"></div>
-                    <div class="stat-card"></div>
-                    <div class="stat-card"></div>
+                    <div class="stat-card">
+                        </div>
+                    <div class="stat-card">
+                        </div>
+                    <div class="stat-card">
+                        
+                    </div>
                 </div>
             </section>
 
@@ -80,18 +84,20 @@
 
     <footer class="main-footer">
         <p>&copy; 2025 - Tutti i diritti riservati</p>
-        <p>Cattaneo Luca 1079489, Locatelli Erica 1081101</p>
+        <p>1079489 Cattaneo Luca e 1081101 Locatelli Erica</p>
     </footer>
 
     <script>
         document.querySelectorAll('.has-submenu > a').forEach(menu => {
             menu.addEventListener('click', function(event) {
                 event.preventDefault();
+                // Chiude altri sottomenù aperti
                 document.querySelectorAll('.submenu').forEach(submenu => {
                     if (submenu !== this.nextElementSibling) {
                         submenu.style.display = 'none';
                     }
                 });
+                // Apre o chiude il sottomenù cliccato
                 let submenu = this.nextElementSibling;
                 if (submenu) {
                     submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
