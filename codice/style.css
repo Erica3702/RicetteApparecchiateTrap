@@ -13,12 +13,11 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* ===== NUOVO HERO HEADER ===== */
 .hero-header {
     height: 100vh; /* IMPORTANTISSIMO: Altezza pari al 100% della finestra del browser */
     
     /* Impostazioni per l'immagine di sfondo */
-    background-image: url('immagini/background_header.png'); /* <-- METTI QUI IL LINK ALLA TUA IMMAGINE! */
+    background-image: url('immagini/background_header.png'); 
     background-size: cover;     /* Copre l'intera area senza deformare l'immagine */
     background-position: center; /* Centra l'immagine */
     background-repeat: no-repeat; /* Evita che l'immagine si ripeta */
@@ -44,26 +43,44 @@ body {
 /* ===== STRUTTURA A DUE COLONNE (SOTTO L'HEADER) ===== */
 .main-container {
     display: flex;
-    /* Rimuoviamo min-height da qui, ci pensa l'header ora */
 }
 
 /* ===== SIDEBAR DI NAVIGAZIONE (SINISTRA) ===== */
 .sidebar {
-    flex: 0 0 250px;
+    flex: 0 0 300px;
     background-color: #05080f; /* Colore scuro della sidebar */
     min-height: 100vh; /* Estende la sidebar per tutta l'altezza dello schermo */
     padding: 2rem;
 }
 
-/* ... il resto del codice per .main-nav, .submenu, ecc. rimane IDENTICO a prima ... */
-.main-nav ul { list-style-type: none; margin-top: 3rem; }
+.main-nav ul { list-style-type: none; margin-top: 0.4rem; }
 .main-nav ul li { margin-bottom: 0.8rem; }
-.main-nav ul li a { color: #f2f2f2; text-decoration: none; font-size: 1rem; font-weight: bold; display: block; transition: color 0.3s; }
+
+.main-nav ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 1.3rem; 
+    font-weight: bold;
+    display: block;
+    transition: color 0.3s;
+}
+
+.main-nav .submenu a {
+    font-size: 1rem; 
+    font-weight: normal; 
+    margin-bottom: 0.5rem;
+}
+
 .main-nav ul li a:hover { color: #7d20bb; }
 .main-nav ul li.active > a { color: #7d20bb; }
-.submenu { list-style-type: none; display: none; padding-left: 1rem; margin-top: 0.5rem; }
-.submenu li a { font-size: 0.9rem; font-weight: normal; margin-bottom: 0.5rem; }
+.submenu { list-style-type: none; display: none; padding-left: 1rem; margin-top: 0rem; }
 
+
+.submenu li a {
+    font-size: 0.6rem; /* <-- RIMANE PICCOLO */
+    font-weight: normal; 
+    margin-bottom: 0.5rem;
+}
 /* ===== CONTENUTO PRINCIPALE (DESTRA) ===== */
 .content {
     flex: 1;
@@ -71,7 +88,6 @@ body {
     background-color: #05080f; /* Colore di sfondo dell'area contenuti */
 }
 
-/* ... il resto del tuo codice per il contenuto rimane quasi identico ... */
 .content h2 { font-family: 'Sorts Mill Goudy', serif; font-size: 2.2rem; color: #f2f2f2; margin-bottom: 2rem; }
 .ricette-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; align-items: start; margin-bottom: 4rem; }
 .recipe-card { text-align: center; }
@@ -79,12 +95,16 @@ body {
 .recipe-card h3 { font-family: 'Sorts Mill Goudy', serif; font-size: 1.2rem; color: #f2f2f2; }
 .statistiche-container { display: flex; justify-content: space-around; gap: 2rem; }
 .stat-card { width: 180px; height: 180px; background-color: #e7dddd; border-radius: 20px; }
-/* ===== FOOTER (MODIFICATO) ===== */
+
+
+
+
+
+/* ===== FOOTER ===== */
 .main-footer {
     width: 100%;
     padding: 1rem 4rem;
     background-color: #05080f;
-    /* LA RIGA 'border-top' È STATA RIMOSSA */
     
     display: flex;
     justify-content: space-between;
@@ -100,7 +120,7 @@ body {
     color: #aaa;
     font-size: 0.9rem;
 }
-/* NUOVA REGOLA PER CREARE LA LINEA CENTRATA */
+
 .main-footer::before {
     content: ''; /* Obbligatorio per ogni pseudo-elemento, anche se vuoto */
     
