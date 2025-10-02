@@ -8,7 +8,7 @@
 
 body {
     /* Il body ora ha solo un colore di sfondo di riserva */
-    background-color: #474747;
+    background-color: #0f0f0f;
     color: #f2f2f2; 
     font-family: 'Montserrat', sans-serif;
 }
@@ -43,6 +43,25 @@ body {
 /* ===== STRUTTURA A DUE COLONNE (SOTTO L'HEADER) ===== */
 .main-container {
     display: flex;
+    position: relative;
+     margin-right: 300px;
+}
+
+.main-container::after {
+    content: ''; /* Obbligatorio */
+    
+    /* Posizione */
+    position: absolute;
+    right: 0; /* Si attacca al lato destro del contenitore principale */
+    top: 50%; /* Si posiziona a metà altezza */
+    transform: translateY(-50%); /* La centra verticalmente */
+    
+    /* Dimensioni */
+    height: 75%; /* Altezza pari al 75% */
+    width: 2px;  /* Spessore della linea */
+    
+    /* Stile */
+    background-color: #b89f62; /* Colore oro */
 }
 
 /* ===== SIDEBAR DI NAVIGAZIONE (SINISTRA) ===== */
@@ -50,8 +69,27 @@ body {
     flex: 0 0 300px;
     background-color: #05080f; /* Colore scuro della sidebar */
     min-height: 100vh; /* Estende la sidebar per tutta l'altezza dello schermo */
-    padding: 2rem;
+    padding: 2rem;  
+    position: relative;  
 }
+
+.sidebar::after {
+    content: ''; /* Obbligatorio per ogni pseudo-elemento */
+    
+    /* Posizione */
+    position: absolute;
+    right: 0; /* Si attacca al lato destro della sidebar */
+    top: 50%; /* Si posiziona a metà altezza */
+    transform: translateY(-50%); /* Trucco per centrarla verticalmente */
+    
+    /* Dimensioni */
+    height: 75%; /* La sua altezza è il 75% di quella della sidebar */
+    width: 2px;  /* Spessore della linea */
+    
+    /* Stile */
+    background-color: #b89f62; /* Colore oro */
+}
+
 
 .main-nav ul { list-style-type: none; margin-top: 0.4rem; }
 .main-nav ul li { margin-bottom: 0.8rem; }
@@ -126,11 +164,11 @@ body {
     
     /* Posizione e Dimensioni */
     position: absolute;
-    top: 0; /* Distanza dal top del footer */
+    top: -1rem; /* Distanza dal top del footer */
     left: 50%;
     transform: translateX(-50%); /* Trucco per centrare perfettamente */
     
-    width: 75%; /* Larghezza della linea (puoi usare % o px, es. 200px) */
+    width: 65%; /* Larghezza della linea (puoi usare % o px, es. 200px) */
     height: 1px; /* Spessore della linea */
     
     /* Stile */
