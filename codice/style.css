@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #0f0f0f;
     color: #f2f2f2; 
@@ -368,4 +372,23 @@ body {
 .filter-form .button-secondary {
     background-color: #555;
     color: #f2f2f2;
+}
+/*STILE PER I MESSAGGI DI STATO  */
+
+.success-message2 {
+    background-color: #27ae60; 
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.error-message2 {
+    background-color: #c0392b; 
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }

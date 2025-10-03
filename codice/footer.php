@@ -26,6 +26,40 @@
             });
         });
     </script>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        // Cerca tutti i link che hanno la classe 'button-delete'
+        const deleteLinks = document.querySelectorAll('.button-delete');
+
+        // Per ogni link trovato, aggiungi un ascoltatore di eventi
+        deleteLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+           
+                event.preventDefault();
+
+                const deleteUrl = this.href;
+
+                // Mostra il pop-up di SweetAlert
+                Swal.fire({
+                    title: 'Sei sicuro?',
+                    text: "Questa azione è irreversibile!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#c0392b', 
+                    cancelButtonColor: '#666',
+                    confirmButtonText: 'Sì, elimina!',
+                    cancelButtonText: 'Annulla'
+                }).then((result) => {
+                   
+                    if (result.isConfirmed) {
+                        window.location.href = deleteUrl;
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

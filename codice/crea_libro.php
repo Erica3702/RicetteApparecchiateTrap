@@ -6,7 +6,13 @@ include 'sidebar.php';
 
 <main class="content">
     <h2>Aggiungi un Nuovo Libro</h2>
-    
+     <?php
+    // BLOCCO MESSAGGI DI ERRORE
+    if (isset($_GET['status']) && $_GET['status'] == 'error_duplicate') {
+        echo '<p class="error-message2">Esiste già un libro con questo codice ISBN. Inseriscine uno diverso.</p>';
+    }
+   
+    ?>
     <form action="salva_libro.php" method="POST" class="form-crud">
         
         <div class="form-group">

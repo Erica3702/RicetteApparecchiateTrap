@@ -52,7 +52,7 @@ if (isset($_GET['action'])) {
                     echo '<td class="actions">';
                     echo '  <div class="button-container">'; 
                     echo '      <a href="modifica_libro.php?id=' . urlencode($row['codISBN']) . '" class="button-edit">Modifica</a>';
-                    echo '      <a href="elimina_libro.php?id=' . urlencode($row['codISBN']) . '" class="button-delete" onclick="return confirm(\'Sei sicuro?\');">Elimina</a>';
+                    echo '      <a href="elimina_libro.php?id=' . urlencode($row['codISBN']) . '" class="button-delete">Elimina</a>';
                     echo '  </div>';
                     echo '</td>';
                     echo "</tr>";

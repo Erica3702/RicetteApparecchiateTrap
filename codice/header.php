@@ -11,9 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Montserrat:wght@400;700&family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header class="hero-header">
+     <header class="hero-header">
         <h1>RICETTE APPARECCHIATE</h1>
     </header> 
 
-    <div class="main-container">
+<div class="main-container">
