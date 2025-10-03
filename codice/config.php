@@ -14,6 +14,5 @@ if ($conn->connect_error) {
     die("Connessione al database fallita: " . $conn->connect_error);
 }
 
-// Imposta il set di caratteri a utf8
 $conn->set_charset("utf8");
 ?>

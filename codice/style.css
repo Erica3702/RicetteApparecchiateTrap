@@ -1,4 +1,4 @@
-/* ===== IMPOSTAZIONI GENERALI E FONT ===== */
+/* IMPOSTAZIONI GENERALI E FONT  */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -34,22 +34,21 @@ body {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* =================================== */
-/* NUOVA STRUTTURA A TRE COLONNE       */
-/* =================================== */
+
+/*STRUTTURA A TRE COLONNE       */
 
 .main-container {
     display: flex;
     width: 100%;
 }
 
-/* --- Colonna Sinistra (Sidebar) --- */
+/* Colonna Sinistra (Sidebar)  */
 .sidebar {
-    flex-basis: 20%;         /* Larghezza base del 25% */
+    flex-basis: 20%;        
     background-color: #05080f;
     min-height: 100vh;
     padding: 2rem;
-    position: relative;      /* Necessario per la linea dorata */
+    position: relative;      
 }
 
 /* Linea dorata a destra della sidebar */
@@ -64,18 +63,18 @@ body {
     background-color: #b89f62;
 }
 
-/* --- Colonna Centrale (Content) --- */
+/* Colonna Centrale (Content)  */
 .content {
-    flex-basis: 60%;         /* Larghezza base del 50% */
+    flex-basis: 60%;       
     padding: 2.5rem 4rem;
     background-color: #05080f;
 }
 
-/* --- Colonna Destra (Vuota) --- */
+/*  Colonna Destra (Vuota)  */
 .right-column {
-    flex-basis: 20%;         /* Larghezza base del 25% */
-    background-color: #05080f; /* Sfondo nero come richiesto */
-    position: relative;      /* Necessario per la linea dorata */
+    flex-basis: 20%;        
+    background-color: #05080f; 
+    position: relative;     
 }
 
 /* Linea dorata a sinistra della colonna destra */
@@ -91,7 +90,7 @@ body {
 }
 
 
-/* ===== ELEMENTI INTERNI (NAVIGAZIONE, CARD, ETC) ===== */
+/*  ELEMENTI INTERNI (NAVIGAZIONE, CARD, ETC)  */
 .main-nav ul { list-style-type: none; margin-top: 0.4rem; }
 .main-nav ul li { margin-bottom: 0.8rem; }
 
@@ -127,9 +126,9 @@ body {
 .recipe-card img { width: 100%; max-width: 250px; height: auto; object-fit: cover; margin-bottom: 1rem; }
 .recipe-card h3 { font-family: 'Sorts Mill Goudy', serif; font-size: 1.2rem; color: #f2f2f2; }
 .statistiche-container { display: flex; justify-content: space-around; gap: 2rem; }
-/* =================================== */
-/* NUOVO STILE STATISTICHE             */
-/* =================================== */
+
+
+/*STILE STATISTICHE             */
 
 .statistiche-container { 
     display: flex; 
@@ -139,11 +138,11 @@ body {
 }
 
 .stat-card {
-    background-color: #1a1a1a; /* Un nero meno intenso dello sfondo */
-    border: 2px solid #b89f62; /* Bordo dorato */
+    background-color: #1a1a1a;
+    border: 2px solid #b89f62; 
     border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Ombra per dare profondità */
-    width: 220px; /* Leggermente più grande */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+    width: 220px; 
     height: 220px;
     padding: 1.5rem;
     
@@ -152,7 +151,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem; /* Spazio tra titolo e numero */
+    gap: 0.5rem; 
     
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transizione fluida */
 }
@@ -162,7 +161,7 @@ body {
     box-shadow: 0 8px 25px rgba(184, 159, 98, 0.4); /* L'ombra diventa dorata */
 }
 
-/* Stile per il titolo (es. "Ricette Totali") */
+/* Stile per il titolo */
 .stat-card h3 {
     font-family: 'Sorts Mill Goudy', serif;
     font-size: 1.2rem;
@@ -174,29 +173,29 @@ body {
 /* Stile per il numero grande */
 .stat-card .stat-number {
     font-family: 'Chonburi', serif;
-    font-size: 4rem; /* Molto più grande */
+    font-size: 4rem; 
     color: #f2f2f2;
     font-weight: bold;
-    line-height: 1; /* Rimuove spazio extra */
+    line-height: 1;
     margin: 0;
 }
 
-/* ===== FOOTER CON TESTO CENTRATO ===== */
+/* FOOTER CON TESTO CENTRATO */
 .main-footer {
     width: 100%;
-    padding: 1.5rem 1rem;      /* Modificato per un look migliore da centrato */
+    padding: 1.5rem 1rem;      
     background-color: #05080f;
-    text-align: center;          /* <-- LA MODIFICA CHIAVE: Centra tutto il testo */
+    text-align: center;          
     position: relative;
     
-    /* Stili che giustamente rimangono */
+    
     padding-top: 1.6rem;
     font-family: 'Sorts Mill Goudy', serif;
     color: #aaa;
     font-size: 0.9rem;
 }
 
-/* Questa regola per la linea dorata è già perfetta e non va toccata */
+
 .main-footer::before {
     content: '';
     position: absolute;
@@ -209,7 +208,6 @@ body {
     border-radius: 2px;
 }
 
-/* Aggiungiamo un piccolo spazio verticale tra le due righe di testo */
 .main-footer p {
     margin: 0.25rem 0;
 }
@@ -225,38 +223,38 @@ body {
 
 
 .table-crud {
-    width: 100%;                  /* Occupa tutto lo spazio disponibile */
-    border-collapse: collapse;      /* Unisce i bordi per un look pulito */
+    width: 100%;                 
+    border-collapse: collapse;      
     margin-top: 2rem;
     font-size: 1rem;
 }
 
 .table-crud thead {
-    background-color: #1a1a1a;    /* Sfondo leggermente diverso per l'intestazione */
+    background-color: #1a1a1a;  /* Intestazione grigio scuro */
 }
 
 .table-crud th {
-    color: #b89f62;               /* Testo intestazione dorato */
-    padding: 1rem;                /* Aumenta lo spazio interno */
+    color: #b89f62;              
+    padding: 1rem;                
     text-align: left;
     font-family: 'Sorts Mill Goudy', serif;
     font-size: 1.2rem;
 }
 
 .table-crud td {
-    padding: 1rem;                /* Aumenta lo spazio anche per le celle */
-    border-bottom: 1px solid #333; /* Linea di separazione grigio scuro tra le righe */
+    padding: 1rem;               
+    border-bottom: 1px solid #333; 
 }
 
 /* Effetto al passaggio del mouse su una riga */
 .table-crud tbody tr:hover {
-    background-color: #2a2a2a;    /* Evidenzia la riga */
+    background-color: #2a2a2a;    
 }
 
 
 /* Stile per la colonna delle azioni e i pulsanti */
 .table-crud .actions {
-    width: 200px; /* Dà una larghezza fissa alla colonna dei pulsanti */
+    width: 200px; 
 }
 
 .table-crud .actions a {
@@ -285,25 +283,89 @@ body {
     margin-bottom: 1.5rem;
 }
 
-/* =================================== */
-/* NUOVO STILE PER I PULSANTI AZIONI   */
-/* =================================== */
+
+/* STILE PER I PULSANTI AZIONI   */
 
 /* Contenitore Flexbox per allineare i pulsanti */
 .table-crud .actions .button-container {
     display: flex;
-    justify-content: center; /* Centra i pulsanti */
+    justify-content: center; 
     align-items: center;
-    gap: 0.5rem; /* Spazio tra i pulsanti */
+    gap: 0.5rem; 
 }
-
 /* Stile specifico per i pulsanti dentro la tabella */
 .table-crud .actions a {
     text-decoration: none;
-    padding: 0.4rem 0.8rem; /* Dimensioni ridotte */
+    padding: 0.4rem 0.8rem; 
     border-radius: 5px;
     font-weight: bold;
     color: #05080f;
-    font-size: 0.9rem; /* Testo ridotto */
+    font-size: 0.9rem; 
     text-align: center;
+}
+
+
+/* STILE PER IL FORM DEI FILTRI  */
+.filter-container {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #666;
+}
+
+.filter-container h4 {
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #f2f2f2;
+}
+
+.filter-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.filter-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.filter-form input[type="text"],
+.filter-form select {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1f1f1f;
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: #f2f2f2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.filter-form .button-group {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-form .button-primary,
+.filter-form .button-secondary {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.filter-form .button-primary {
+    background-color: #b89f62;
+    color: #0f0f0f;
+}
+
+.filter-form .button-secondary {
+    background-color: #555;
+    color: #f2f2f2;
 }

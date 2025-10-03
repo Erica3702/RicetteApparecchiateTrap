@@ -3,7 +3,7 @@ include 'config.php';
 include 'header.php';
 include 'sidebar.php';
 
-// 1. Controlla se l'ID del libro è stato passato tramite URL
+// Controlla se l'ID del libro è stato passato tramite URL
 if (!isset($_GET['id'])) {
     echo "ID del libro non specificato.";
     exit(); // Interrompe lo script se non c'è un ID
@@ -11,7 +11,7 @@ if (!isset($_GET['id'])) {
 
 $codISBN = $_GET['id'];
 
-// 2. Recupera i dati attuali del libro dal database
+// Recupera i dati attuali del libro dal database
 $sql = "SELECT titolo, anno FROM Libro WHERE codISBN = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $codISBN);

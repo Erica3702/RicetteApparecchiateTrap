@@ -1,8 +1,8 @@
 <?php
-// 1. Includi la configurazione del database
+// configurazione del database
 include 'config.php';
 
-// 2. Includi l'inizio della pagina HTML (apre <body> e <div class="main-container">)
+// Include l'inizio della pagina HTML 
 include 'header.php';
 
 include 'sidebar.php';
@@ -38,7 +38,7 @@ include 'sidebar.php';
         <h2>Statistiche Veloci</h2>
         <div class="statistiche-container">
             <?php
-            // === Blocco PHP per mostrare le statistiche dinamiche ===
+            // Blocco PHP per mostrare le statistiche dinamiche 
             $sql_libri_count = "SELECT COUNT(*) AS total_libri FROM Libro";
             
             $result_libri_count = $conn->query($sql_libri_count);
@@ -63,6 +63,6 @@ include 'sidebar.php';
 <aside class="right-column"></aside>
 
 <?php
-// 3. Includi la fine della pagina HTML (chiude <div class="main-container"> e <body>)
+//Include la fine della pagina HTML 
 include 'footer.php';
 ?>
