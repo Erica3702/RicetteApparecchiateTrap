@@ -7,10 +7,9 @@
                 <a href="#">GESTIONE LIBRI</a>
                 
                 <ul class="submenu">
-                    <li><a href="crea_libro.php">CREA LIBRO</a></li>
-                    <li><a href="elenco_libri.php">VISUALIZZA LIBRI</a></li>
-                    <li><a href="#">ELIMINA LIBRO</a></li>
-                    <li><a href="#">MODIFICA LIBRO</a></li>
+                    <li><a href="crea_libro.php">NUOVO LIBRO</a></li>
+                    
+                    <li><a href="elenco_libri.php">GESTISCI LIBRI</a></li>
                 </ul>
 
             </li>

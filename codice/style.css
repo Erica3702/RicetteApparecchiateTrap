@@ -253,6 +253,7 @@ body {
     background-color: #2a2a2a;    /* Evidenzia la riga */
 }
 
+
 /* Stile per la colonna delle azioni e i pulsanti */
 .table-crud .actions {
     width: 200px; /* Dà una larghezza fissa alla colonna dei pulsanti */
@@ -282,4 +283,27 @@ body {
     padding: 1rem;
     border-radius: 5px;
     margin-bottom: 1.5rem;
+}
+
+/* =================================== */
+/* NUOVO STILE PER I PULSANTI AZIONI   */
+/* =================================== */
+
+/* Contenitore Flexbox per allineare i pulsanti */
+.table-crud .actions .button-container {
+    display: flex;
+    justify-content: center; /* Centra i pulsanti */
+    align-items: center;
+    gap: 0.5rem; /* Spazio tra i pulsanti */
+}
+
+/* Stile specifico per i pulsanti dentro la tabella */
+.table-crud .actions a {
+    text-decoration: none;
+    padding: 0.4rem 0.8rem; /* Dimensioni ridotte */
+    border-radius: 5px;
+    font-weight: bold;
+    color: #05080f;
+    font-size: 0.9rem; /* Testo ridotto */
+    text-align: center;
 }
