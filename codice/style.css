@@ -1,10 +1,10 @@
 /* ===== IMPOSTAZIONI GENERALI E FONT ===== */
-@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Montserrat:wght@400;700&family=Sorts+Mill+Goudy&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Montserrat:wght@400;700&family=Sorts+Mill+Goudy&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+}*/
 
 body {
     /* Il body ora ha solo un colore di sfondo di riserva */
@@ -44,7 +44,6 @@ body {
 .main-container {
     display: flex;
     position: relative;
-     margin-right: 300px;
 }
 
 .main-container::after {
@@ -152,7 +151,7 @@ body {
     position: relative;
     
     /* Mettiamo la spaziatura sopra il footer qui, invece che sul bordo */
-    padding-top: 1,6rem;
+    padding-top: 1.6rem;
 
     font-family: 'Sorts Mill Goudy', serif;
     color: #aaa;
