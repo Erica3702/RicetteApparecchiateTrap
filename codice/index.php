@@ -2,16 +2,15 @@
 // 1. Includi la configurazione del database
 include 'config.php';
 
-// 2. Includi l'inizio della pagina HTML (header, sidebar, etc.)
+// 2. Includi l'inizio della pagina HTML (apre <body> e <div class="main-container">)
 include 'header.php';
-
-// 3. Includi la sidebar
-include 'sidebar.php';
 ?>
+
+<?php include 'sidebar.php'; ?>
 
 <main class="content">
     <section class="results-section">
-        <h2>Le Ricette più Pubblicate</h2>
+        <h2>Le Ricette più Apprezzate</h2>
         <div class="ricette-container">
             <article class="recipe-card">
                 <img src="immagini/lasagna.webp" alt="Immagine Lasagne alla Bolognese">
@@ -33,9 +32,11 @@ include 'sidebar.php';
         <div class="statistiche-container">
             <?php
             // === Blocco PHP per mostrare le statistiche dinamiche ===
-            // (Il tuo codice per le query va qui, è già corretto)
-            $sql_libri_count = "SELECT COUNT(*) AS total_libri FROM libri";
+            $sql_libri_count = "SELECT COUNT(*) AS total_libri FROM Libro";
+            
+            // LA CORREZIONE È QUI: c'era 'aconn' invece di '$conn'
             $result_libri_count = $conn->query($sql_libri_count);
+            
             $total_libri = ($result_libri_count && $result_libri_count->num_rows > 0) ? $result_libri_count->fetch_assoc()['total_libri'] : 0;
             echo '<div class="stat-card"><h3>Libri Totali</h3><p>' . $total_libri . '</p></div>';
 
@@ -49,7 +50,10 @@ include 'sidebar.php';
         </div>
     </section>
 </main>
+
+<aside class="right-column"></aside>
+
 <?php
-// 4. Includi la fine della pagina HTML (footer, script, etc.)
+// 3. Includi la fine della pagina HTML (chiude <div class="main-container"> e <body>)
 include 'footer.php';
 ?>

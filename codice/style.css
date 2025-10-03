@@ -1,95 +1,97 @@
 /* ===== IMPOSTAZIONI GENERALI E FONT ===== */
-/*@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Montserrat:wght@400;700&family=Sorts+Mill+Goudy&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}*/
+}
 
 body {
-    /* Il body ora ha solo un colore di sfondo di riserva */
     background-color: #0f0f0f;
     color: #f2f2f2; 
     font-family: 'Montserrat', sans-serif;
 }
 
 .hero-header {
-    height: 100vh; /* IMPORTANTISSIMO: Altezza pari al 100% della finestra del browser */
-    
-    /* Impostazioni per l'immagine di sfondo */
+    height: 100vh;
     background-image: url('immagini/background_header.png'); 
-    background-size: cover;     /* Copre l'intera area senza deformare l'immagine */
-    background-position: center; /* Centra l'immagine */
-    background-repeat: no-repeat; /* Evita che l'immagine si ripeta */
-    background-attachment: fixed; /* Mantiene l'immagine fissa durante lo scorrimento del resto della pagina */
-    background-color: rgba(26, 22, 22, 0.345); /* Sovrapposizione scura per migliorare la leggibilità del testo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(26, 22, 22, 0.345);
     background-blend-mode: multiply;
-
-    /* Usiamo flexbox per centrare il titolo verticalmente e orizzontalmente */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .hero-header h1 {
-    font-family: 'Chonburi', serif; /* Ho usato Playfair Display come da mockup */
-    font-size: 4rem; /* Aumentato per un maggiore impatto */
+    font-family: 'Chonburi', serif;
+    font-size: 4rem;
     color: #e4e0e0;
     text-align: center;
     font-style: italic;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Aggiunge un'ombra al testo per renderlo più leggibile */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* ===== STRUTTURA A DUE COLONNE (SOTTO L'HEADER) ===== */
+/* =================================== */
+/* NUOVA STRUTTURA A TRE COLONNE       */
+/* =================================== */
+
 .main-container {
     display: flex;
-    position: relative;
+    width: 100%;
 }
 
-.main-container::after {
-    content: ''; /* Obbligatorio */
-    
-    /* Posizione */
-    position: absolute;
-    right: 0; /* Si attacca al lato destro del contenitore principale */
-    top: 50%; /* Si posiziona a metà altezza */
-    transform: translateY(-50%); /* La centra verticalmente */
-    
-    /* Dimensioni */
-    height: 75%; /* Altezza pari al 75% */
-    width: 2px;  /* Spessore della linea */
-    
-    /* Stile */
-    background-color: #b89f62; /* Colore oro */
-}
-
-/* ===== SIDEBAR DI NAVIGAZIONE (SINISTRA) ===== */
+/* --- Colonna Sinistra (Sidebar) --- */
 .sidebar {
-    flex: 0 0 300px;
-    background-color: #05080f; /* Colore scuro della sidebar */
-    min-height: 100vh; /* Estende la sidebar per tutta l'altezza dello schermo */
-    padding: 2rem;  
-    position: relative;  
+    flex-basis: 20%;         /* Larghezza base del 25% */
+    background-color: #05080f;
+    min-height: 100vh;
+    padding: 2rem;
+    position: relative;      /* Necessario per la linea dorata */
 }
 
+/* Linea dorata a destra della sidebar */
 .sidebar::after {
-    content: ''; /* Obbligatorio per ogni pseudo-elemento */
-    
-    /* Posizione */
+    content: '';
     position: absolute;
-    right: 0; /* Si attacca al lato destro della sidebar */
-    top: 50%; /* Si posiziona a metà altezza */
-    transform: translateY(-50%); /* Trucco per centrarla verticalmente */
-    
-    /* Dimensioni */
-    height: 75%; /* La sua altezza è il 75% di quella della sidebar */
-    width: 2px;  /* Spessore della linea */
-    
-    /* Stile */
-    background-color: #b89f62; /* Colore oro */
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 75%;
+    width: 2px;
+    background-color: #b89f62;
+}
+
+/* --- Colonna Centrale (Content) --- */
+.content {
+    flex-basis: 60%;         /* Larghezza base del 50% */
+    padding: 2.5rem 4rem;
+    background-color: #05080f;
+}
+
+/* --- Colonna Destra (Vuota) --- */
+.right-column {
+    flex-basis: 20%;         /* Larghezza base del 25% */
+    background-color: #05080f; /* Sfondo nero come richiesto */
+    position: relative;      /* Necessario per la linea dorata */
+}
+
+/* Linea dorata a sinistra della colonna destra */
+.right-column::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 75%;
+    width: 2px;
+    background-color: #b89f62;
 }
 
 
+/* ===== ELEMENTI INTERNI (NAVIGAZIONE, CARD, ETC) ===== */
 .main-nav ul { list-style-type: none; margin-top: 0.4rem; }
 .main-nav ul li { margin-bottom: 0.8rem; }
 
@@ -114,15 +116,9 @@ body {
 
 
 .submenu li a {
-    font-size: 0.6rem; /* <-- RIMANE PICCOLO */
+    font-size: 0.6rem;
     font-weight: normal; 
     margin-bottom: 0.5rem;
-}
-/* ===== CONTENUTO PRINCIPALE (DESTRA) ===== */
-.content {
-    flex: 1;
-    padding: 2.5rem 4rem;
-    background-color: #05080f; /* Colore di sfondo dell'area contenuti */
 }
 
 .content h2 { font-family: 'Sorts Mill Goudy', serif; font-size: 2.2rem; color: #f2f2f2; margin-bottom: 2rem; }
@@ -133,47 +129,35 @@ body {
 .statistiche-container { display: flex; justify-content: space-around; gap: 2rem; }
 .stat-card { width: 180px; height: 180px; background-color: #e7dddd; border-radius: 20px; }
 
-
-
-
-
-/* ===== FOOTER ===== */
+/* ===== FOOTER CON TESTO CENTRATO ===== */
 .main-footer {
     width: 100%;
-    padding: 1rem 4rem;
+    padding: 1.5rem 1rem;      /* Modificato per un look migliore da centrato */
     background-color: #05080f;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    /* Aggiungiamo 'position: relative' per posizionare il pseudo-elemento in modo sicuro */
+    text-align: center;          /* <-- LA MODIFICA CHIAVE: Centra tutto il testo */
     position: relative;
     
-    /* Mettiamo la spaziatura sopra il footer qui, invece che sul bordo */
+    /* Stili che giustamente rimangono */
     padding-top: 1.6rem;
-
     font-family: 'Sorts Mill Goudy', serif;
     color: #aaa;
     font-size: 0.9rem;
 }
 
+/* Questa regola per la linea dorata è già perfetta e non va toccata */
 .main-footer::before {
-    content: ''; /* Obbligatorio per ogni pseudo-elemento, anche se vuoto */
-    
-    /* Posizione e Dimensioni */
+    content: '';
     position: absolute;
-    top: -1rem; /* Distanza dal top del footer */
+    top: -1rem;
     left: 50%;
-    transform: translateX(-50%); /* Trucco per centrare perfettamente */
-    
-    width: 65%; /* Larghezza della linea (puoi usare % o px, es. 200px) */
-    height: 1px; /* Spessore della linea */
-    
-    /* Stile */
-    background-color: #b89f62; /* Il tuo colore oro */
-    border-radius: 2px; /* Rende i bordi della linea leggermente arrotondati */
+    transform: translateX(-50%);
+    width: 65%;
+    height: 1px;
+    background-color: #b89f62;
+    border-radius: 2px;
 }
+
+/* Aggiungiamo un piccolo spazio verticale tra le due righe di testo */
 .main-footer p {
-    margin: 0; /* Rimuoviamo il margine di default dei paragrafi */
+    margin: 0.25rem 0;
 }
