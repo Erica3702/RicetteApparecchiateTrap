@@ -23,6 +23,8 @@ if (isset($_GET['action'])) {
             echo '<p class="success-message">Libro salvato con successo!</p>';
         } elseif ($_GET['status'] == 'deleted') {
             echo '<p class="success-message">Libro eliminato con successo!</p>';
+        }elseif ($_GET['status'] == 'success_update') { // <-- AGGIUNGI QUESTA PARTE
+            echo '<p class="success-message">Libro aggiornato con successo!</p>';
         }
     }
     ?>
@@ -49,7 +51,7 @@ if (isset($_GET['action'])) {
                     echo "<td>" . htmlspecialchars($row['anno']) . "</td>";
                     echo '<td class="actions">';
                     echo '  <div class="button-container">'; // <-- Questo contenitore è fondamentale
-                    echo '      <a href="modifica_libro_form.php?id=' . urlencode($row['codISBN']) . '" class="button-edit">Modifica</a>';
+                    echo '      <a href="modifica_libro.php?id=' . urlencode($row['codISBN']) . '" class="button-edit">Modifica</a>';
                     echo '      <a href="elimina_libro.php?id=' . urlencode($row['codISBN']) . '" class="button-delete" onclick="return confirm(\'Sei sicuro?\');">Elimina</a>';
                     echo '  </div>';
                     echo '</td>';
