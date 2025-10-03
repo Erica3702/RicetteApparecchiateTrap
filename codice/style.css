@@ -127,7 +127,59 @@ body {
 .recipe-card img { width: 100%; max-width: 250px; height: auto; object-fit: cover; margin-bottom: 1rem; }
 .recipe-card h3 { font-family: 'Sorts Mill Goudy', serif; font-size: 1.2rem; color: #f2f2f2; }
 .statistiche-container { display: flex; justify-content: space-around; gap: 2rem; }
-.stat-card { width: 180px; height: 180px; background-color: #e7dddd; border-radius: 20px; }
+/* =================================== */
+/* NUOVO STILE STATISTICHE             */
+/* =================================== */
+
+.statistiche-container { 
+    display: flex; 
+    justify-content: space-around; 
+    gap: 2rem;
+    flex-wrap: wrap; /* Permette di andare a capo su schermi piccoli */
+}
+
+.stat-card {
+    background-color: #1a1a1a; /* Un nero meno intenso dello sfondo */
+    border: 2px solid #b89f62; /* Bordo dorato */
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Ombra per dare profondità */
+    width: 220px; /* Leggermente più grande */
+    height: 220px;
+    padding: 1.5rem;
+    
+    /* Comandi per centrare il contenuto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem; /* Spazio tra titolo e numero */
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transizione fluida */
+}
+
+.stat-card:hover {
+    transform: translateY(-10px); /* Si solleva al passaggio del mouse */
+    box-shadow: 0 8px 25px rgba(184, 159, 98, 0.4); /* L'ombra diventa dorata */
+}
+
+/* Stile per il titolo (es. "Ricette Totali") */
+.stat-card h3 {
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 1.2rem;
+    color: #cccccc;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Stile per il numero grande */
+.stat-card .stat-number {
+    font-family: 'Chonburi', serif;
+    font-size: 4rem; /* Molto più grande */
+    color: #f2f2f2;
+    font-weight: bold;
+    line-height: 1; /* Rimuove spazio extra */
+    margin: 0;
+}
 
 /* ===== FOOTER CON TESTO CENTRATO ===== */
 .main-footer {

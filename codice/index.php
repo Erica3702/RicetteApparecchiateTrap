@@ -34,19 +34,15 @@ include 'header.php';
             // === Blocco PHP per mostrare le statistiche dinamiche ===
             $sql_libri_count = "SELECT COUNT(*) AS total_libri FROM Libro";
             
-            // LA CORREZIONE È QUI: c'era 'aconn' invece di '$conn'
             $result_libri_count = $conn->query($sql_libri_count);
             
             $total_libri = ($result_libri_count && $result_libri_count->num_rows > 0) ? $result_libri_count->fetch_assoc()['total_libri'] : 0;
-            echo '<div class="stat-card"><h3>Libri Totali</h3><p>' . $total_libri . '</p></div>';
-
-            $sql_ricette_count = "SELECT COUNT(*) AS total_ricette FROM ricette";
+            echo '<div class="stat-card"><h3>Libri Totali</h3><p class="stat-number">' . $total_libri . '</p></div>';
+            $sql_ricette_count = "SELECT COUNT(*) AS total_ricette FROM Ricetta";
             $result_ricette_count = $conn->query($sql_ricette_count);
             $total_ricette = ($result_ricette_count && $result_ricette_count->num_rows > 0) ? $result_ricette_count->fetch_assoc()['total_ricette'] : 0;
-            echo '<div class="stat-card"><h3>Ricette Totali</h3><p>' . $total_ricette . '</p></div>';
-
-            echo '<div class="stat-card"><h3>Altra Statistica</h3><p>Dato X</p></div>';
-            ?>
+            echo '<div class="stat-card"><h3>Ricette Totali</h3><p class="stat-number">' . $total_ricette . '</p></div>';
+            echo '<div class="stat-card"><h3>da decidere</h3><p class="stat-number">' . $total_libri . '</p></div>';            ?>
         </div>
     </section>
 </main>
