@@ -4,12 +4,19 @@ include 'config.php';
 
 // 2. Includi l'inizio della pagina HTML (apre <body> e <div class="main-container">)
 include 'header.php';
+
+include 'sidebar.php';
 ?>
 
-<?php include 'sidebar.php'; ?>
 
 <main class="content">
-    <section class="results-section">
+ <?php
+    if (isset($_GET['status']) && $_GET['status'] == 'success_create') {
+        echo '<p class="success-message">Libro salvato con successo!</p>';
+    }
+    ?>    
+
+<section class="results-section">
         <h2>Le Ricette più Apprezzate</h2>
         <div class="ricette-container">
             <article class="recipe-card">
