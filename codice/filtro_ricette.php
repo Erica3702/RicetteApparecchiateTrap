@@ -18,7 +18,7 @@ $filtro_libro_attuale = isset($_GET['filtro_libro']) ? $_GET['filtro_libro'] : '
 
 <div class="filter-container">
     <h4>Filtra Ricette</h4>
-    <form action="elenco_ricette.php" method="GET" class="filter-form">
+    <form action="elenco_ricette.php#risultati" method="GET" class="filter-form">
         <div class="form-group">
             <label for="filtro_nome">Nome Ricetta</label>
             <input type="text" id="filtro_nome" name="filtro_nome" value="<?php echo $filtro_nome_attuale; ?>">

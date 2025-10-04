@@ -63,7 +63,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 ?>
 
-<main class="content">
+<main class="content" id="risultati">
     <h2>Elenco Ricette</h2>
 
     <table class="table-crud">
