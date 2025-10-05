@@ -397,3 +397,102 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+
+/* Fa in modo che il link del titolo non sia sottolineato e mantenga il colore del testo */
+.table-crud td a {
+    color: inherit;
+    text-decoration: none;
+    display: block; /* Fa in modo che il link occupi tutta la cella */
+}
+
+
+/* Stile per il contenitore principale dei dettagli */
+.dettaglio-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #1a1a1a; /* Un colore di sfondo leggermente diverso, se vuoi */
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+/* Stile per i titoli nella pagina di dettaglio, simili a quelli del sito */
+.dettaglio-container h3 {
+    font-family: 'Georgia', serif; /* O il font che usi per i titoli */
+    color: #c5b358; /* Il tuo colore oro/ocra */
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+}
+
+/* Stile per la lista degli ingredienti */
+.ingredienti-lista ul {
+    list-style: none; /* Rimuove i pallini dall'elenco */
+    padding: 0;
+    margin: 0;
+}
+
+.ingredienti-lista li {
+    display: flex; /* Attiva la magia di Flexbox! */
+    justify-content: space-between; /* Spinge il nome a sinistra e la quantità a destra */
+    align-items: center;
+    padding: 0.8rem 0.5rem;
+    border-bottom: 1px solid #333; /* Una linea sottile come nella tabella */
+    font-size: 1rem;
+}
+
+/* Stile per l'ultimo elemento della lista per non avere un doppio bordo */
+.ingredienti-lista li:last-child {
+    border-bottom: none;
+}
+
+/* Opzionale: stile per il nome e la quantità */
+.nome-ingrediente {
+    color: #f0f0f0; /* Testo bianco/grigio chiaro */
+}
+
+.quantita-ingrediente {
+    color: #aaa; /* Un colore leggermente più scuro per la quantità */
+    font-weight: bold;
+}
+
+
+/* Stile di base condiviso da tutti i bottoni */
+.button-primary,
+.button-secondary {
+    display: inline-block; /* Permette di dare padding e dimensioni */
+    padding: 0.8rem 1.5rem;
+    border: 1px solid transparent; /* Bordo trasparente di base */
+    border-radius: 5px; /* Angoli arrotondati */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none; /* Rimuove la sottolineatura dai link <a> */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; /* Animazione fluida al passaggio del mouse */
+    font-size: 0.9rem;
+}
+
+/* Colori per il bottone primario (Filtra, Salva) */
+.button-primary {
+    background-color: #c5b358; /* Il tuo colore oro/ocra principale */
+    color: #121212; /* Testo scuro per un buon contrasto */
+}
+
+/* Colori per il bottone secondario (Reset, Torna indietro) */
+.button-secondary {
+    background-color: #333; /* Grigio scuro */
+    color: #f0f0f0; /* Testo chiaro */
+    border-color: #555; /* Un bordo leggermente più chiaro per definirlo */
+}
+
+/* Effetto al passaggio del mouse (hover) */
+.button-primary:hover {
+    background-color: #d9c670; /* Oro leggermente più chiaro */
+    transform: translateY(-2px); /* Un piccolo effetto di sollevamento */
+}
+
+.button-secondary:hover {
+    background-color: #444; /* Grigio leggermente più chiaro */
+    border-color: #777;
+}

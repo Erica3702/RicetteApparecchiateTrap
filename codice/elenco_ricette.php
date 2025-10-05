@@ -9,7 +9,7 @@ $filtro_libro_attivo = !empty($_GET['filtro_libro']);
 
 // La query SQL non cambia: recuperiamo sempre tutti i dati.
 // Usare LEFT JOIN è robusto e ci dà tutte le informazioni di cui abbiamo bisogno in ogni caso.
-$sql = "SELECT R.titolo, R.tipo, GROUP_CONCAT(RG.nome SEPARATOR ', ') AS regioni,
+$sql = "SELECT R.numero, R.titolo, R.tipo, GROUP_CONCAT(RG.nome SEPARATOR ', ') AS regioni,
                RP.numeroPagina, L.titolo AS titolo_libro
         FROM Ricetta R
         LEFT JOIN ricettaRegionale RR ON R.numero = RR.ricetta
@@ -64,7 +64,7 @@ $result = $stmt->get_result();
 ?>
 
 <main class="content" id="risultati">
-    <h2>Elenco Ricette</h2>
+    <h2>Elenco Ricette (clicca il nome per i dettagli)</h2>
 
     <table class="table-crud">
         <thead>
@@ -83,8 +83,8 @@ $result = $stmt->get_result();
             if ($result && $result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr>";
+                    echo '<td><a href="dettaglio_ricetta.php?id=' . $row['numero'] . '">' . htmlspecialchars($row['titolo']) . '</a></td>';
                     echo "<td>" . htmlspecialchars($row['titolo']) . "</td>";
-                    echo "<td>" . htmlspecialchars(ucfirst($row['tipo'])) . "</td>";
                     echo "<td>" . ($row['regioni'] ? htmlspecialchars($row['regioni']) : '<em>-</em>') . "</td>";
                     
                     if (!$filtro_libro_attivo) { // MODIFICA 3: Mostra la cella del libro solo se il filtro non è attivo
