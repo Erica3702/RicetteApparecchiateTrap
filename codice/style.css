@@ -39,7 +39,7 @@ body {
 }
 
 
-/*STRUTTURA A TRE COLONNE       */
+/*STRUTTURA A TRE COLONNE  */
 
 .main-container {
     display: flex;
@@ -94,7 +94,7 @@ body {
 }
 
 
-/*  ELEMENTI INTERNI (NAVIGAZIONE, CARD, ETC)  */
+/*  ELEMENTI INTERNI (NAVIGAZIONE, CARD, ECC)  */
 .main-nav ul { list-style-type: none; margin-top: 0.4rem; }
 .main-nav ul li { margin-bottom: 0.8rem; }
 
@@ -132,7 +132,7 @@ body {
 .statistiche-container { display: flex; justify-content: space-around; gap: 2rem; }
 
 
-/*STILE STATISTICHE             */
+/*STILE STATISTICHE */
 
 .statistiche-container { 
     display: flex; 
@@ -234,7 +234,7 @@ body {
 }
 
 .table-crud thead {
-    background-color: #1a1a1a;  /* Intestazione grigio scuro */
+    background-color: #1a1a1a;  
 }
 
 .table-crud th {
@@ -278,7 +278,7 @@ body {
 .button-edit:hover { background-color: #d1b87a; }
 .button-delete:hover { background-color: #e74c3c; }
 
-/* Messaggio di successo (invariato) */
+/* Messaggio di successo */
 .success-message {
     background-color: #27ae60;
     color: white;
@@ -411,15 +411,15 @@ html {
 .dettaglio-container {
     margin-top: 2rem;
     padding: 1.5rem;
-    background-color: #1a1a1a; /* Un colore di sfondo leggermente diverso, se vuoi */
+    background-color: #1a1a1a; 
     border: 1px solid #333;
     border-radius: 5px;
 }
 
 /* Stile per i titoli nella pagina di dettaglio, simili a quelli del sito */
 .dettaglio-container h3 {
-    font-family: 'Georgia', serif; /* O il font che usi per i titoli */
-    color: #c5b358; /* Il tuo colore oro/ocra */
+    font-family: 'Georgia', serif; 
+    color: #c5b358; 
     margin-top: 0;
     margin-bottom: 1.5rem;
     border-bottom: 1px solid #444;
@@ -428,17 +428,17 @@ html {
 
 /* Stile per la lista degli ingredienti */
 .ingredienti-lista ul {
-    list-style: none; /* Rimuove i pallini dall'elenco */
+    list-style: none; 
     padding: 0;
     margin: 0;
 }
 
 .ingredienti-lista li {
-    display: flex; /* Attiva la magia di Flexbox! */
-    justify-content: space-between; /* Spinge il nome a sinistra e la quantità a destra */
+    display: flex; 
+    justify-content: space-between; /* mette il nome a sinistra e la quantità a destra */
     align-items: center;
     padding: 0.8rem 0.5rem;
-    border-bottom: 1px solid #333; /* Una linea sottile come nella tabella */
+    border-bottom: 1px solid #333; 
     font-size: 1rem;
 }
 
@@ -447,13 +447,12 @@ html {
     border-bottom: none;
 }
 
-/* Opzionale: stile per il nome e la quantità */
 .nome-ingrediente {
-    color: #f0f0f0; /* Testo bianco/grigio chiaro */
+    color: #f0f0f0; 
 }
 
 .quantita-ingrediente {
-    color: #aaa; /* Un colore leggermente più scuro per la quantità */
+    color: #aaa; 
     font-weight: bold;
 }
 
@@ -467,32 +466,31 @@ html {
     border-radius: 5px; /* Angoli arrotondati */
     font-weight: bold;
     text-align: center;
-    text-decoration: none; /* Rimuove la sottolineatura dai link <a> */
+    text-decoration: none; 
     cursor: pointer;
-    transition: all 0.2s ease-in-out; /* Animazione fluida al passaggio del mouse */
-    font-size: 0.9rem;
+    transition: all 0.2s ease-in-out; 
 }
 
 /* Colori per il bottone primario (Filtra, Salva) */
 .button-primary {
-    background-color: #c5b358; /* Il tuo colore oro/ocra principale */
-    color: #121212; /* Testo scuro per un buon contrasto */
+    background-color: #c5b358; 
+    color: #121212; 
 }
 
 /* Colori per il bottone secondario (Reset, Torna indietro) */
 .button-secondary {
-    background-color: #333; /* Grigio scuro */
-    color: #f0f0f0; /* Testo chiaro */
-    border-color: #555; /* Un bordo leggermente più chiaro per definirlo */
+    background-color: #333; 
+    color: #f0f0f0; 
+    border-color: #555; 
 }
 
 /* Effetto al passaggio del mouse (hover) */
 .button-primary:hover {
-    background-color: #d9c670; /* Oro leggermente più chiaro */
-    transform: translateY(-2px); /* Un piccolo effetto di sollevamento */
+    background-color: #d9c670; 
+    transform: translateY(-2px); 
 }
 
 .button-secondary:hover {
-    background-color: #444; /* Grigio leggermente più chiaro */
+    background-color: #444;
     border-color: #777;
 }

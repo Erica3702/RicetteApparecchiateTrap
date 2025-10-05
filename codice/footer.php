@@ -33,7 +33,7 @@
         // Cerca tutti i link che hanno la classe 'button-delete'
         const deleteLinks = document.querySelectorAll('.button-delete');
 
-        // Per ogni link trovato, aggiungi un ascoltatore di eventi
+        // Per ogni link trovato, aggiungi un event listener
         deleteLinks.forEach(link => {
             link.addEventListener('click', function(event) {
            
@@ -41,7 +41,7 @@
 
                 const deleteUrl = this.href;
 
-                // Mostra il pop-up di SweetAlert
+                // Mostra il pop-up 
                 Swal.fire({
                     title: 'Sei sicuro?',
                     text: "Questa azione è irreversibile!",

@@ -3,7 +3,7 @@ include 'config.php';
 include 'header.php';
 
 // Determina l'azione in base al parametro GET nell'URL
-$pageTitle = "Elenco dei Libri"; // Titolo di default
+$pageTitle = "Elenco dei Libri"; 
 if (isset($_GET['action'])) {
     if ($_GET['action'] == 'delete') {
         $pageTitle = "Seleziona un Libro da Eliminare";

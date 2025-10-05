@@ -3,12 +3,9 @@ include 'config.php';
 include 'header.php';
 include 'sidebar.php';
 
-// MODIFICA 1: Reintroduciamo il controllo per sapere se il filtro è attivo.
-// Ci servirà solo per la parte di visualizzazione HTML.
 $filtro_libro_attivo = !empty($_GET['filtro_libro']);
 
-// La query SQL non cambia: recuperiamo sempre tutti i dati.
-// Usare LEFT JOIN è robusto e ci dà tutte le informazioni di cui abbiamo bisogno in ogni caso.
+
 $sql = "SELECT R.numero, R.titolo, R.tipo, GROUP_CONCAT(RG.nome SEPARATOR ', ') AS regioni,
                RP.numeroPagina, L.titolo AS titolo_libro
         FROM Ricetta R
@@ -21,7 +18,7 @@ $sql = "SELECT R.numero, R.titolo, R.tipo, GROUP_CONCAT(RG.nome SEPARATOR ', ') 
 $params = [];
 $types = "";
 
-// GESTIONE DEI FILTRI (invariata)
+// GESTIONE DEI FILTRI 
 if (!empty($_GET['filtro_nome'])) {
     $sql .= " AND R.titolo LIKE ?";
     $params[] = "%" . $_GET['filtro_nome'] . "%";
@@ -44,11 +41,9 @@ if (!empty($_GET['filtro_libro'])) {
     $types .= "s";
 }
 
-// GROUP BY (invariato)
+
 $sql .= " GROUP BY R.numero, R.titolo, R.tipo, RP.numeroPagina, L.titolo ORDER BY R.titolo ASC";
 
-
-// ESECUZIONE DELLA QUERY (invariata)
 $stmt = $conn->prepare($sql);
 
 if ($stmt === false) {
@@ -72,7 +67,7 @@ $result = $stmt->get_result();
                 <th>Titolo Ricetta</th>
                 <th>Categoria</th>
                 <th>Regione/i</th>
-                <?php if (!$filtro_libro_attivo): // MODIFICA 2: Mostra la colonna "Libro" solo se NON stiamo filtrando per libro ?>
+                <?php if (!$filtro_libro_attivo): ?>
                     <th>Libro</th>
                 <?php endif; ?>
                 <th>Numero Pagina</th>
@@ -87,7 +82,7 @@ $result = $stmt->get_result();
                     echo "<td>" . htmlspecialchars($row['titolo']) . "</td>";
                     echo "<td>" . ($row['regioni'] ? htmlspecialchars($row['regioni']) : '<em>-</em>') . "</td>";
                     
-                    if (!$filtro_libro_attivo) { // MODIFICA 3: Mostra la cella del libro solo se il filtro non è attivo
+                    if (!$filtro_libro_attivo) { 
                         echo "<td>" . ($row['titolo_libro'] ? htmlspecialchars($row['titolo_libro']) : '<em>-</em>') . "</td>";
                     }
 
@@ -96,7 +91,6 @@ $result = $stmt->get_result();
                     echo "</tr>";
                 }
             } else {
-                // MODIFICA 4: Il colspan torna a essere dinamico
                 $colspan = $filtro_libro_attivo ? 4 : 5;
                 echo '<tr><td colspan="' . $colspan . '">Nessuna ricetta trovata con i criteri specificati.</td></tr>';
             }

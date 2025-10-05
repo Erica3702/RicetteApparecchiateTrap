@@ -8,8 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $titolo = $_POST['titolo'];
     $anno = $_POST['anno'];
 
-    // NUOVO BLOCCO DI CONTROLLO ESISTENZA 
-    // Prima di inserire, controllia se esiste già un libro con questo ISBN
+    // Prima di inserire, controlla se esiste già un libro con questo ISBN
     $check_sql = "SELECT codISBN FROM Libro WHERE codISBN = ?";
     $check_stmt = $conn->prepare($check_sql);
     $check_stmt->bind_param("s", $codISBN);
@@ -18,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($check_result->num_rows > 0) {
         // Se la query restituisce una o più righe, significa che il libro esiste già.
-        // Reindirizza l'utente al form di creazione con un messaggio di errore.
+        // Reindirizza l'utente alla pagina di creazione con un messaggio di errore.
         header("Location: crea_libro.php?status=error_duplicate");
         exit(); 
     }
