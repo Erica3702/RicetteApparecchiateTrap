@@ -1,0 +1,38 @@
+{% extends 'ricette/base.html' %}
+
+{% block title %}Gestione Libri{% endblock %}
+
+{% block content %}
+    <h2>Gestione Libri</h2>
+
+    <table class="table-crud">
+        <thead>
+            <tr>
+                <th>ISBN</th>
+                <th>Titolo</th>
+                <th>Anno</th>
+                <th class="actions">Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for libro in lista_libri %}
+            <tr>
+                <td>{{ libro.codISBN }}</td>
+                <td>{{ libro.titolo }}</td>
+                <td>{{ libro.anno }}</td>
+                <td class="actions">
+                    <div class="button-container">
+                        <a href="{% url 'modifica-libro' libro.codISBN %}" class="button-edit">Modifica</a>
+                        
+                        <a href="{% url 'elimina-libro' libro.codISBN %}" class="button-delete">Elimina</a>
+                    </div>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4">Nessun libro trovato nel database.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'ricette/base.html' %}
+
+{% block title %}Modifica: {{ libro.titolo }}{% endblock %}
+
+{% block content %}
+    <h2>Modifica Libro</h2>
+
+    <form method="POST" class="form-crud">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="form-group">
+                {{ field.label_tag }}
+                {{ field }}
+                {% if field.errors %}
+                    <div class="error-message2">{{ field.errors.as_text }}</div>
+                {% endif %}
+            </div>
+        {% endfor %}
+        <button type="submit" class="button-primary">Aggiorna Libro</button>
+    </form>
+{% endblock %}

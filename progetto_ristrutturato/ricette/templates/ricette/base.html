@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Ricette Apparecchiate{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'ricette/css/style.css' %}">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Montserrat:wght@400;700&family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
+
+</head>
+<body>
+     <header class="hero-header">
+        <h1>RICETTE APPARECCHIATE</h1>
+    </header> 
+
+    <div class="main-container">
+        
+        {% include 'ricette/partials/sidebar.html' %}
+
+        <main class="content">
+            {% block content %}
+            {% endblock %}
+        </main>
+
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 - Tutti i diritti riservati</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.has-submenu > a').forEach(menu => {
+            menu.addEventListener('click', function(event) {
+                event.preventDefault();
+                // Chiude altri sottomenù aperti
+                document.querySelectorAll('.submenu').forEach(submenu => {
+                    if (submenu !== this.nextElementSibling) {
+                        submenu.style.display = 'none';
+                    }
+                });
+                // Apre o chiude il sottomenù cliccato
+                let submenu = this.nextElementSibling;
+                if (submenu) {
+                    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

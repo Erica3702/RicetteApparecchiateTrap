@@ -1,0 +1,102 @@
+{% extends 'ricette/base.html' %}
+
+{% block title %}Elenco di Tutte le Ricette{% endblock %}
+
+{% block sidebar %}
+    <form method="GET" action="{% url 'elenco-ricette' %}" class="filtri-container">
+        <h4>Filtra Ricette</h4>
+
+        <div class="filtro-item">
+            <label for="nome">Nome Ricetta:</label>
+            <input type="text" id="nome" name="nome" value="{{ nome_selezionato }}">
+        </div>
+
+        <div class="filtro-item">
+            <label for="tipo">Tipo Piatto:</label>
+            <select name="tipo" id="tipo">
+                <option value="">Tutti</option>
+                {% for tipo in tipi_disponibili %}
+                    <option value="{{ tipo }}" {% if tipo == tipo_selezionato %}selected{% endif %}>
+                        {{ tipo|capfirst }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="filtro-item">
+            <label for="regione">Regione:</label>
+            <select name="regione" id="regione">
+                <option value="">Tutte</option>
+                {% for regione in tutte_le_regioni %}
+                    <option value="{{ regione.cod }}" {% if regione.cod == regione_selezionata %}selected{% endif %}>
+                        {{ regione.nome }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="filtro-item">
+            <label for="libro">Ricettario:</label>
+            <select name="libro" id="libro">
+                <option value="">Tutti</option>
+                {% for libro in tutti_i_libri %}
+                    <option value="{{ libro.codISBN }}" {% if libro.codISBN == libro_selezionato %}selected{% endif %}>
+                        {{ libro.titolo }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="button-primary">Filtra</button>
+            <a href="{% url 'elenco-ricette' %}" class="button-secondary">Reset</a>
+        </div>
+    </form>
+{% endblock %}
+
+
+{% block content %}
+    <h2>Elenco Completo delle Ricette</h2>
+
+    <table class="table-crud">
+        <thead>
+            <tr>
+                <th>Titolo Ricetta</th>
+                <th>Tipo</th>
+                <th>Regione/i</th>
+                <th>Pubblicata in</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ricetta in lista_ricette %}
+            <tr>
+                <td>
+                    <a href="{% url 'dettaglio-ricetta' ricetta.numero %}">
+                        {{ ricetta.titolo }}
+                    </a>
+                </td>
+                <td>{{ ricetta.get_tipo_display }}</td>
+                <td>
+                    {% for regione in ricetta.regioni.all %}
+                        {{ regione.nome }}{% if not forloop.last %}, {% endif %}
+                    {% empty %}
+                        <em>-</em>
+                    {% endfor %}
+                </td>
+                <td>
+                    {% for pagina in ricetta.pubblicata_in.all %}
+                        {{ pagina.libro.titolo }} (Pag. {{ pagina.numeroPagina }})
+                        {% if not forloop.last %}<br>{% endif %}
+                    {% empty %}
+                        <em>Non pubblicata</em>
+                    {% endfor %}
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4">Nessuna ricetta trovata con i filtri selezionati.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

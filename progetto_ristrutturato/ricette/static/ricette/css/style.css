@@ -1,0 +1,442 @@
+/* IMPOSTAZIONI GENERALI E FONT  */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #f2f2f2; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero-header {
+    height: 100vh;
+    background-image: url('../images/background_header.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(26, 22, 22, 0.345);
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-header h1 {
+    font-family: 'Chonburi', serif;
+    font-size: 4rem;
+    color: #e4e0e0;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+
+/*STRUTTURA A TRE COLONNE  */
+
+.main-container {
+    display: flex;
+    width: 100%;
+}
+
+/* Colonna Sinistra (Sidebar)  */
+.sidebar {
+    flex-basis: 20%;        
+    background-color: #05080f;
+    min-height: 100vh;
+    padding: 2rem;
+    position: relative;     
+}
+
+/* Linea dorata a destra della sidebar */
+.sidebar::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 75%;
+    width: 2px;
+    background-color: #b89f62;
+}
+
+/* Colonna Centrale (Content)  */
+.content {
+    flex-basis: 60%;      
+    padding: 2.5rem 4rem;
+    background-color: #05080f;
+}
+
+/* Colonna Destra (Vuota)  */
+.right-column {
+    flex-basis: 20%;        
+    background-color: #05080f; 
+    position: relative;     
+}
+
+/* Linea dorata a sinistra della colonna destra */
+.right-column::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 75%;
+    width: 2px;
+    background-color: #b89f62;
+}
+
+
+/* ELEMENTI INTERNI (NAVIGAZIONE, CARD, ECC)  */
+.main-nav ul { list-style-type: none; margin-top: 0.4rem; }
+.main-nav ul li { margin-bottom: 0.8rem; }
+
+.main-nav ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 1.3rem; 
+    font-weight: bold;
+    display: block;
+    transition: color 0.3s;
+}
+
+.main-nav .submenu a {
+    font-size: 1rem; 
+    font-weight: normal; 
+    margin-bottom: 0.5rem;
+}
+
+.main-nav ul li a:hover { color: #b89f62; }
+.main-nav ul li.active > a { color: #b89f62; }
+.submenu { list-style-type: none; display: none; padding-left: 1rem; margin-top: 0rem; }
+
+
+.submenu li a {
+    font-size: 0.6rem;
+    font-weight: normal; 
+    margin-bottom: 0.5rem;
+}
+
+.content h2 { font-family: 'Sorts Mill Goudy', serif; font-size: 2.2rem; color: #f2f2f2; margin-bottom: 2rem; }
+.ricette-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; align-items: start; margin-bottom: 4rem; }
+.recipe-card { text-align: center; }
+.recipe-card img { width: 100%; max-width: 250px; height: auto; object-fit: cover; margin-bottom: 1rem; }
+.recipe-card h3 { font-family: 'Sorts Mill Goudy', serif; font-size: 1.2rem; color: #f2f2f2; }
+.statistiche-container { display: flex; justify-content: space-around; gap: 2rem; }
+
+
+/*STILE STATISTICHE */
+
+.statistiche-container { 
+    display: flex; 
+    justify-content: space-around; 
+    gap: 2rem;
+    flex-wrap: wrap; /* Permette di andare a capo su schermi piccoli */
+}
+
+.stat-card {
+    background-color: #1a1a1a;
+    border: 2px solid #b89f62; 
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+    width: 220px; 
+    height: 220px;
+    padding: 1.5rem;
+    
+    /* Comandi per centrare il contenuto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem; 
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transizione fluida */
+}
+
+.stat-card:hover {
+    transform: translateY(-10px); /* Si solleva al passaggio del mouse */
+    box-shadow: 0 8px 25px rgba(184, 159, 98, 0.4); /* L'ombra diventa dorata */
+}
+
+/* Stile per il titolo */
+.stat-card h3 {
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 1.2rem;
+    color: #cccccc;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Stile per il numero grande */
+.stat-card .stat-number {
+    font-family: 'Chonburi', serif;
+    font-size: 4rem; 
+    color: #f2f2f2;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+}
+
+/* FOOTER CON TESTO CENTRATO */
+.main-footer {
+    width: 100%;
+    padding: 1.5rem 1rem;       
+    background-color: #05080f;
+    text-align: center;         
+    position: relative;
+    padding-top: 1.6rem;
+    font-family: 'Sorts Mill Goudy', serif;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+
+.main-footer::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
+    height: 1px;
+    background-color: #b89f62;
+    border-radius: 2px;
+}
+
+.main-footer p {
+    margin: 0.25rem 0;
+}
+
+
+/* Stile per i form CRUD */
+.form-crud { max-width: 80%; margin: 0 auto; }
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; color: #b89f62; }
+.form-group input { width: 100%; padding: 0.8rem; border-radius: 5px; border: 1px solid #555; background-color: #1a1a1a; color: #f2f2f2; font-size: 1rem; }
+
+
+/* TABELLE */
+.table-crud {
+    width: 100%;               
+    border-collapse: collapse;     
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+.table-crud thead {
+    background-color: #1a1a1a;  
+}
+
+.table-crud th {
+    color: #b89f62;             
+    padding: 1rem;              
+    text-align: left;
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 1.2rem;
+}
+
+.table-crud td {
+    padding: 1rem;             
+    border-bottom: 1px solid #333; 
+}
+
+.table-crud tbody tr:hover {
+    background-color: #2a2a2a;    
+}
+
+.table-crud .actions {
+    width: 200px; 
+}
+
+.table-crud .actions .button-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 0.5rem; 
+}
+
+/* =================================
+   STILE UNIFICATO PER I PULSANTI
+   ================================= */
+
+/* Stile di base condiviso da tutti gli elementi (sia <a> che <button>) */
+.button-primary,
+.button-secondary,
+.button-edit,
+.button-delete {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none; 
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out; 
+}
+
+/* Stile per i pulsanti più piccoli nella tabella */
+.table-crud .button-edit,
+.table-crud .button-delete {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+/* Colori specifici per ogni tipo di pulsante */
+.button-primary {
+    background-color: #b89f62; 
+    color: #05080f; 
+}
+.button-secondary {
+    background-color: #555; 
+    color: #f2f2f2; 
+    border-color: #777;
+}
+.button-edit { 
+    background-color: #b89f62;
+    color: #05080f; 
+}
+.button-delete { 
+    background-color: #c0392b;
+    color: #f2f2f2;
+}
+
+/* Effetti al passaggio del mouse (hover) */
+.button-primary:hover,
+.button-edit:hover {
+    background-color: #d1b87a; 
+    transform: translateY(-2px); 
+}
+.button-secondary:hover {
+    background-color: #777;
+    transform: translateY(-2px); 
+}
+.button-delete:hover { 
+    background-color: #e74c3c;
+    transform: translateY(-2px); 
+}
+
+
+/* STILE PER IL FORM DEI FILTRI  */
+.filter-container {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #666;
+}
+
+.filter-container h4 {
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #f2f2f2;
+}
+
+.filter-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.filter-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.filter-form input[type="text"],
+.filter-form select {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1f1f1f;
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: #f2f2f2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.filter-form .button-group {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+
+/*STILE PER I MESSAGGI DI STATO  */
+.success-message,
+.success-message2 {
+    background-color: #27ae60; 
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.error-message2 {
+    background-color: #c0392b; 
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+
+/* DETTAGLIO RICETTA */
+.table-crud td a {
+    color: inherit;
+    text-decoration: none;
+    display: block; /* Fa in modo che il link occupi tutta la cella */
+}
+
+.dettaglio-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #1a1a1a; 
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.dettaglio-container h3 {
+    font-family: 'Georgia', serif; 
+    color: #c5b358; 
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+}
+
+.ingredienti-lista ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.ingredienti-lista li {
+    display: flex; 
+    justify-content: space-between; /* mette il nome a sinistra e la quantità a destra */
+    align-items: center;
+    padding: 0.8rem 0.5rem;
+    border-bottom: 1px solid #333; 
+    font-size: 1rem;
+}
+
+.ingredienti-lista li:last-child {
+    border-bottom: none;
+}
+
+.nome-ingrediente {
+    color: #f0f0f0; 
+}
+
+.quantita-ingrediente {
+    color: #aaa; 
+    font-weight: bold;
+}

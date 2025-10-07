@@ -1,0 +1,971 @@
+﻿numeroRicetta,numero,ingrediente,quantità
+1,1,Fontina DOP,400g
+1,2,Latte intero,250ml
+1,3,Tuorli d'uovo,4
+1,4,Burro,30g
+2,1,Costolette di vitello,4
+2,2,Fontina DOP,150g
+2,3,Prosciutto cotto,4 fette
+2,4,Uova,2
+2,5,Pangrattato,q.b.
+2,6,Burro,80g
+3,1,Brodo di carne,1.5L
+3,2,Pane raffermo,400g
+3,3,Cavolo verza,250g
+3,4,Fontina DOP,150g
+3,5,Cipolla,1
+3,6,Burro,50g
+4,1,Farina di mais,250g
+4,2,Farina 00,250g
+4,3,Uova,2
+4,4,Zucchero,150g
+4,5,Burro,100g
+4,6,Mandorle,50g
+4,7,Lievito per dolci,1/2 bustina
+5,1,Riso Carnaroli,500g
+5,2,Zafferano,2 bustine
+5,3,Brodo di carne,q.b.
+5,4,Burro,40g
+6,1,Fesa di vitello,4 fette
+6,2,Pangrattato,100g
+6,3,Uova,2
+7,1,Trofie fresche,500g
+7,2,Basilico ,200g
+7,3,Pinoli,40g
+7,4,Parmigiano Reggiano,40g
+7,5,Fagiolini bolliti,200g
+7,6,Patate bollite,200g
+7,7,Olio evo,40g
+8,1,Carote,3
+8,2,Broccolo,1
+8,3,Fagiolini,150g
+8,4,Patate,2
+8,5,Pesce da bollire,1kg
+8,6,Salsa verde,q.b.
+9,1,Acqua,420g
+9,2,Farina,400g
+9,3,Sale,16g
+9,4,Olio,40g
+9,5,Crescenza,400g
+10,1,Mocetta,200g
+10,2,Miele di castagno,2 cucchiai
+10,3,Olio extra vergine d'oliva,q.b.
+10,4,Pane nero,4 fette
+11,1,Basilico genovese,50g
+11,2,Olio extra vergine d'oliva,100ml
+11,3,Parmigiano Reggiano,70g
+11,4,Pecorino sardo,30g
+11,5,Pinoli,15g
+11,6,Aglio,2 spicchi
+11,7,Sale grosso,q.b.
+12,1,Farina di ceci,250g
+12,2,Acqua,750ml
+12,3,Olio extra vergine d'oliva,50ml
+12,4,Sale e pepe,q.b.
+13,1,Formaggio Montasio,300g
+13,2,Patate,500g
+13,3,Cipolle,1
+13,4,"Olio, sale, pepe",q.b.
+14,1,Prosciutto crudo di San Daniele,200g
+14,2,Fichi,4
+14,3,Grissini,q.b.
+15,1,Farina 00,500g
+15,2,Zucchero,150g
+15,3,Burro,150g
+15,4,Uvetta,100g
+15,5,Pinoli,50g
+15,6,Noci,50g
+15,7,Grappa,1 bicchierino
+15,8,Lievito di birra,20g
+16,1,Crauti,500g
+16,2,Fagioli borlotti,300g
+16,3,Patate,2
+16,4,Pancetta affumicata,100g
+16,5,Farina,1 cucchiaio
+16,6,Alloro,1 foglia
+17,1,Manzo (polpa),800g
+17,2,Cipolle,500g
+17,3,Paprika dolce,2 cucchiai
+17,4,Brodo di carne,q.b.
+17,5,Olio o strutto,q.b.
+18,1,Pane raffermo,250g
+18,2,Speck,100g
+18,3,Latte,250ml
+18,4,Uova,2
+18,5,Farina,30g
+18,6,Erba cipollina,q.b.
+18,7,Brodo di carne,1.5L
+19,1,Pasta sfoglia,1 rotolo
+19,2,Mele Golden,1kg
+19,3,Uvetta,80g
+19,4,Pinoli,50g
+19,5,Pangrattato,50g
+19,6,Cannella,q.b.
+19,7,Zucchero,80g
+20,1,Speck,200g
+20,2,Pane nero,4 fette
+20,3,Cetriolini sott'aceto,q.b.
+21,1,Stoccafisso (baccalà secco),500g
+21,2,Cipolle bianche,2
+21,3,Acciughe sotto sale,4 filetti
+21,4,Grana Padano,50g
+21,5,Latte,250ml
+21,6,Olio extra vergine d'oliva,150ml
+22,1,Mascarpone,500g
+22,2,Uova freschissime,4
+22,3,Zucchero,100g
+22,4,Savoiardi,300g
+22,5,Caffè,300ml
+22,6,Cacao amaro in polvere,q.b.
+23,1,Riso Vialone Nano,320g
+23,2,Piselli freschi,500g
+23,3,Pancetta,50g
+23,4,Brodo vegetale,1L
+23,5,Grana Padano,40g
+23,6,Prezzemolo,q.b.
+24,1,Bigoli,320g
+24,2,Cipolle bianche,2
+24,3,Acciughe sotto sale,8 filetti
+24,4,Olio extra vergine d'oliva,q.b.
+25,1,Sarde fresche,500g
+25,2,Cipolle bianche,2
+25,3,Aceto di vino bianco,1/2 bicchiere
+25,4,Uvetta,30g
+25,5,Pinoli,30g
+25,6,Farina,q.b.
+26,1,Fegato di vitello,500g
+26,2,Cipolle bianche di Chioggia,2
+26,3,Burro,50g
+26,4,Olio extra vergine d'oliva,3 cucchiai
+26,5,Aceto di vino bianco,1 spruzzo
+27,1,Radicchio Rosso di Treviso Tardivo,2 cespi
+27,2,Olio extra vergine d'oliva,q.b.
+27,3,Sale e pepe,q.b.
+28,1,Polenta,500g
+28,2,Uccellini (o quaglie),8
+28,3,Pancetta,100g
+28,4,Salvia,q.b.
+28,5,Burro,q.b.
+29,1,Riso Arborio,320g
+29,2,Fagioli borlotti,200g (secchi)
+29,3,Salame d'la duja,100g
+29,4,Verza,1-Apr
+29,5,Lardo,50g
+29,6,Vino rosso (Barbera),1/2 bicchiere
+30,1,"Manzo (scaramella, punta di petto)",1kg
+30,2,Cotechino,1
+30,3,Lingua di vitello,1
+30,4,Gallina,1-Feb
+30,5,"Carote, sedano, cipolla",per il brodo
+30,6,Sale grosso,q.b.
+31,1,Aglio,6 teste
+31,2,Acciughe sotto sale,600g
+31,3,Olio extra vergine d'oliva,300ml
+31,4,Latte (facoltativo),1 bicchiere
+32,1,Farina 00,300g
+32,2,Uova,3
+32,3,Arrosto di vitello,200g (per il ripieno)
+32,4,Prosciutto crudo,50g (per il ripieno)
+32,5,Grana Padano,50g (per il ripieno)
+32,6,Noce moscata,q.b.
+33,1,Robiola di Roccaverano,200g
+33,2,Olio extra vergine d'oliva,q.b.
+33,3,Pepe nero,q.b.
+33,4,Focaccia o pane casereccio,q.b.
+34,1,Nocciole tostate,100g
+34,2,Farina 00,100g
+34,3,Zucchero a velo,100g
+34,4,Burro,100g
+34,5,Cioccolato fondente,100g (per la farcia)
+35,1,Girello di vitello,800g
+35,2,Tonno sott'olio,200g
+35,3,Uova sode,2
+35,4,Capperi sotto sale,1 cucchiaio
+35,5,Acciughe sotto sale,4 filetti
+35,6,Maionese,200g
+36,1,Tajarin (tagliolini all'uovo),320g
+36,2,Tartufo bianco d'Alba,q.b.
+36,3,Burro,60g
+36,4,Grana Padano,q.b.
+37,1,Cioccolato gianduia,200g
+37,2,Nocciole,50g
+38,1,Farina 00,500g
+38,2,Acqua,250ml
+38,3,Lievito di birra,15g
+38,4,Olio extra vergine d'oliva,50ml
+38,5,Malto (o zucchero),1 cucchiaino
+38,6,Sale,10g
+39,1,Manzo (cappello del prete),1kg
+39,2,Barolo,750ml
+39,3,Carote,2
+39,4,Cipolle,2
+39,5,Sedano,2 coste
+39,6,"Olio, burro, sale, pepe",q.b.
+40,1,Zucchero,150g
+40,2,Uova,4
+40,3,Latte,500ml
+40,4,Amaretti secchi,100g
+40,5,Cacao amaro,30g
+40,6,Rum,2 cucchiai
+41,1,Riso Carnaroli,320g
+41,2,Zafferano in pistilli,0.15g
+41,3,Midollo di bue,30g
+41,4,Brodo di carne,1.5L
+41,5,Grana Padano,80g
+41,6,Burro,50g
+41,7,Cipolla,1-Feb
+42,1,Costoletta di vitello (lombata),4
+42,2,Uova,2
+42,3,Pangrattato,200g
+42,4,Burro chiarificato,200g
+42,5,Sale,q.b.
+43,1,Pizzoccheri (pasta di grano saraceno),300g
+43,2,Patate,200g
+43,3,Verza,150g
+43,4,Formaggio Casera,200g
+43,5,Grana Padano,50g
+43,6,Burro,80g
+43,7,Aglio,1 spicchio
+44,1,Ossobuco di vitello,4
+44,2,Farina bianca,q.b.
+44,3,Cipolla,1
+44,4,Brodo di carne,q.b.
+44,5,Vino bianco secco,1/2 bicchiere
+44,6,"Gremolata (prezzemolo, aglio, scorza limone)",q.b.
+45,1,Farina di grano saraceno,250g
+45,2,Farina di mais,100g
+45,3,Formaggio Valtellina Casera,200g
+45,4,Burro,100g
+45,5,Aglio,1 spicchio
+46,1,Verza,1kg
+46,2,Costine di maiale,500g
+46,3,Cotenna di maiale,200g
+46,4,Verzini (salsicce),4
+46,5,Lardo,50g
+46,6,Passata di pomodoro,2 cucchiai
+47,1,Farina 00,500g
+47,2,Uova,4
+47,3,Burro,160g
+47,4,Zucchero,150g
+47,5,Uvetta,100g
+47,6,Canditi (arancia e cedro),100g
+47,7,Lievito di birra,20g
+48,1,Mandorle,250g
+48,2,Miele,250g
+48,3,Zucchero,100g
+48,4,Albumi d'uovo,2
+48,5,Ostie,2 fogli
+49,1,Carne di manzo avanzata (lesso o arrosto),300g
+49,2,Uova,1
+49,3,Grana Padano grattugiato,50g
+49,4,Prezzemolo tritato,q.b.
+49,5,Pangrattato,q.b.
+49,6,Burro,per friggere
+50,1,Formaggio Casera giovane,250g
+50,2,Farina di grano saraceno,100g
+50,3,Farina 00,50g
+50,4,Acqua frizzante fredda,200ml
+50,5,Grappa,1 cucchiaio
+50,6,Olio per friggere,q.b.
+51,1,Salsiccia fresca di maiale,400g
+51,2,Finocchietto selvatico,1 mazzetto
+51,3,Vino bianco,1/2 bicchiere
+51,4,Peperoncino,q.b.
+52,1,Riso Arborio,500g
+52,2,Zafferano,1 bustina
+52,3,Ragù di carne,300g
+52,4,Piselli,100g
+52,5,Caciocavallo,100g
+52,6,"Uova, farina, pangrattato",per la panatura
+53,1,"Frutta fresca (limoni, mandorle, caffè)",500g
+53,2,Zucchero,250g
+53,3,Acqua,500ml
+54,1,Bucatini o spaghetti,320g
+54,2,Sarde fresche,500g
+54,3,Finocchietto selvatico,1 mazzetto
+54,4,Pinoli,30g
+54,5,Uva passa,30g
+54,6,Cipolla,1
+54,7,Pangrattato tostato (muddica),q.b.
+55,1,Busiate (pasta fresca),400g
+55,2,Pomodori da pesto,250g
+55,3,Mandorle,50g
+55,4,Basilico,q.b.
+55,5,Aglio rosso di Nubia,1 spicchio
+55,6,Pecorino grattugiato,q.b.
+56,1,Pane casereccio (tipo rimacinato),4 fette grandi
+56,2,Olio extra vergine d'oliva,q.b.
+56,3,Pomodori,2
+56,4,Formaggio primo sale,100g
+56,5,Acciughe sott'olio,q.b.
+56,6,Origano,q.b.
+57,1,Pan di Spagna,1
+57,2,Ricotta di pecora,500g
+57,3,Zucchero,300g
+57,4,Gocce di cioccolato,100g
+57,5,Frutta candita,100g
+57,6,Pasta di mandorle (Martorana),200g
+58,1,Melanzane,2
+58,2,Pomodori pelati,400g
+58,3,Ricotta salata,q.b.
+58,4,Basilico,q.b.
+58,5,Aglio,1 spicchio
+58,6,Pasta (rigatoni o maccheroni),320g
+59,1,Melanzane,1kg
+59,2,Sedano,4 coste
+59,3,Cipolla,1
+59,4,Pomodori,500g
+59,5,Olive verdi,100g
+59,6,Capperi,50g
+59,7,Aceto,1/2 bicchiere
+59,8,Zucchero,1 cucchiaio
+60,1,Farina 00,250g
+60,2,Strutto,50g
+60,3,Zucchero,30g
+60,4,Cacao amaro,5g
+60,5,Ricotta di pecora,700g (per il ripieno)
+60,6,Zucchero a velo,300g (per il ripieno)
+60,7,Gocce di cioccolato,q.b. (per il ripieno)
+61,1,Farina 00 (per l'impasto),500g
+61,2,Acqua,300ml
+61,3,Lievito di birra fresco,7g
+61,4,Sale,10g
+61,5,Passata di pomodoro,400g
+61,6,Mozzarella fiordilatte,250g
+61,7,Basilico fresco,q.b.
+62,1,Patate,1kg
+62,2,Farina 00,300g
+62,3,Passata di pomodoro,500g
+62,4,Mozzarella,250g
+62,5,Parmigiano Reggiano,100g
+63,1,Spaghetti,320g
+63,2,Vongole veraci,1kg
+63,3,Aglio,2 spicchi
+63,4,Peperoncino,1
+63,5,Prezzemolo,1 ciuffo
+63,6,Vino bianco secco,1/2 bicchiere
+64,1,Pane casereccio raffermo,8 fette
+64,2,Mozzarella di bufala,250g
+64,3,Uova,2
+64,4,Latte,q.b.
+64,5,Farina,q.b.
+64,6,Olio per friggere,q.b.
+65,1,Pasta frolla,1 panetto
+65,2,Ricotta di pecora,500g
+65,3,Grano cotto,400g
+65,4,Zucchero,400g
+65,5,Uova,5
+65,6,Canditi misti,150g
+65,7,Acqua di fiori d'arancio,2 cucchiai
+66,1,Farina,500g
+66,2,Strutto,100g
+66,3,Semolino,150g (per il ripieno)
+66,4,Ricotta fresca,200g (per il ripieno)
+66,5,Canditi,50g (per il ripieno)
+66,6,Zucchero,200g (per il ripieno)
+67,1,Farina 00,500g
+67,2,Acqua,300ml
+67,3,Lievito di birra,10g
+67,4,"Ripieno (cicoli, ricotta, salame)",q.b.
+67,5,Olio per friggere,q.b.
+68,1,Farina manitoba,500g
+68,2,Uova,6
+68,3,Burro,200g
+68,4,Zucchero,50g
+68,5,Lievito di birra,20g
+68,6,Rum,per la bagna
+68,7,Acqua e zucchero,per la bagna
+69,1,Limoni non trattati,8-Oct
+69,2,Alcol puro 95°,1L
+69,3,Zucchero,700g
+69,4,Acqua,1L
+70,1,Pan di Spagna,1
+70,2,Crema pasticcera,500ml
+70,3,Crema al cioccolato,500ml
+70,4,Alchermes,q.b.
+70,5,Cioccolato a scaglie,q.b.
+71,1,Farina 00,200g (per la pasta)
+71,2,Uova,2 (per la pasta)
+71,3,Lonza di maiale,100g (per il ripieno)
+71,4,Prosciutto crudo,100g (per il ripieno)
+71,5,Mortadella,100g (per il ripieno)
+71,6,Parmigiano Reggiano,100g (per il ripieno)
+71,7,Brodo di cappone,2L
+72,1,Sfoglia all'uovo,400g
+72,2,Ragù alla bolognese,500g
+72,3,Besciamella,750ml
+72,4,Parmigiano Reggiano,150g
+73,1,Farina 00,500g
+73,2,Strutto,125g
+73,3,Acqua,200ml
+73,4,Sale,10g
+73,5,Bicarbonato,1 pizzico
+74,1,Sfoglia agli spinaci,400g
+74,2,Ragù alla bolognese,500g
+74,3,Besciamella,750ml
+74,4,Parmigiano Reggiano,150g
+75,1,Farina 00,500g
+75,2,Acqua frizzante,200ml
+75,3,Strutto,100g
+75,4,Lievito di birra,15g
+75,5,Sale,10g
+76,1,Bietole,1kg
+76,2,Parmigiano Reggiano,150g
+76,3,Lardo,50g
+76,4,Cipolla,1
+76,5,Pasta brisée o sfoglia,2 rotoli
+77,1,Mosto d'uva cotto,q.b.
+77,2,Aceto di vino,q.b.
+78,1,Farina 00,500g
+78,2,Acqua,200ml
+78,3,Strutto,50g
+78,4,Lievito di birra,15g
+78,5,Panna fresca,50ml
+78,6,Sale,10g
+79,1,Coniglio intero,1
+79,2,Finocchietto selvatico,1 mazzetto
+79,3,Pancetta,100g
+79,4,Aglio,2 spicchi
+79,5,Vino bianco,1 bicchiere
+80,1,Salame di Fabriano,200g
+80,2,Pane casereccio,4 fette
+80,3,Fichi,4
+81,1,Semola di grano duro,300g
+81,2,Uova,3
+81,3,Brodo di carne,1.5L
+81,4,Parmigiano Reggiano,q.b.
+81,5,Noce moscata,q.b.
+82,1,Ciauscolo (salame spalmabile),200g
+82,2,Pane casereccio,4 fette
+83,1,Caciotta di Urbino,200g
+83,2,Pere,2
+83,3,Noci,q.b.
+84,1,"Pesce misto (seppie, scampi, merluzzo, triglie)",1.5kg
+84,2,Pomodori pelati,500g
+84,3,Aceto di vino bianco,1/2 bicchiere
+84,4,Cipolla,1
+84,5,Pane casereccio tostato,4 fette
+85,1,Stoccafisso (ammollato),1kg
+85,2,Patate,800g
+85,3,Pomodori pelati,400g
+85,4,Olive nere,100g
+85,5,Acciughe sotto sale,4
+85,6,Capperi,1 cucchiaio
+86,1,Pangrattato,150g
+86,2,Parmigiano Reggiano,150g
+86,3,Uova,3
+86,4,Noce moscata,q.b.
+86,5,Scorza di limone,q.b.
+86,6,Brodo di carne,1.5L
+87,1,Olive verdi ascolane,500g
+87,2,Carne di manzo,100g
+87,3,Carne di maiale,100g
+87,4,Carne di pollo,100g
+87,5,"Parmigiano, uova, noce moscata",per il ripieno
+87,6,"Farina, uova, pangrattato",per l'impanatura
+88,1,Latte,1L
+88,2,Zucchero,200g
+88,3,Farina 00,150g
+88,4,Tuorli d'uovo,6
+88,5,Scorza di limone,1
+88,6,Farina e uova,per impanare
+89,1,Sfoglia all'uovo,400g
+89,2,Carne macinata mista,500g
+89,3,Rigaglie di pollo,200g
+89,4,Besciamella,500ml
+89,5,Parmigiano Reggiano,100g
+89,6,Vino cotto o passata di pomodoro,q.b.
+90,1,Riso Arborio,300g
+90,2,Ragù di carne,150g
+90,3,Mozzarella,100g
+90,4,Uova,2
+90,5,Pangrattato,q.b.
+91,1,Costolette di agnello,12
+91,2,Strutto o olio,q.b.
+91,3,Sale e pepe,q.b.
+92,1,Carciofi romaneschi (mammole),4
+92,2,Mentuccia romana,1 mazzetto
+92,3,Aglio,2 spicchi
+92,4,Olio extra vergine d'oliva,q.b.
+92,5,Sale e pepe,q.b.
+93,1,Bucatini o spaghetti,320g
+93,2,Guanciale,150g
+93,3,Pomodori pelati,400g
+93,4,Pecorino di Amatrice,75g
+93,5,Peperoncino,1
+93,6,Vino bianco secco,1/2 bicchiere
+94,1,Spaghetti,320g
+94,2,Guanciale,150g
+94,3,Tuorli d'uovo,4
+94,4,Pecorino Romano,100g
+94,5,Pepe nero macinato fresco,q.b.
+95,1,Tonnarelli o spaghetti,320g
+95,2,Pecorino Romano,200g
+95,3,Pepe nero in grani,q.b.
+96,1,Coda di bue (vaccina),1.5kg
+96,2,Sedano,3 coste
+96,3,Pomodori pelati,1kg
+96,4,Lardo,100g
+96,5,Uva sultanina e pinoli,q.b. (facoltativo)
+97,1,Maialino da latte (intero),1
+97,2,"Rosmarino, aglio",q.b.
+97,3,Vino bianco secco,1 bicchiere
+97,4,Sale e pepe,q.b.
+98,1,Fesa di vitello,8 fette
+98,2,Prosciutto crudo,8 fette
+98,3,Salvia,8 foglie
+98,4,Burro,50g
+98,5,Vino bianco secco,1/2 bicchiere
+99,1,Mezzi rigatoni o spaghetti,320g
+99,2,Guanciale,150g
+99,3,Pecorino Romano,100g
+99,4,Pepe nero,q.b.
+100,1,Carciofi romaneschi (mammole),4
+100,2,Olio per friggere,q.b.
+100,3,Sale e pepe,q.b.
+101,1,Farina 00,250g
+101,2,Farina manitoba,250g
+101,3,Latte,250ml
+101,4,Zucchero,100g
+101,5,Uova,2
+101,6,Burro,50g
+101,7,Panna fresca liquida,500ml (per la farcia)
+102,1,Carne di pecora,1kg
+102,2,Spiedini di legno,q.b.
+102,3,Sale,q.b.
+103,1,"Verdure miste (carciofi, piselli, carote, spinaci)",1kg
+103,2,"Legumi misti (fave, lenticchie, ceci)",500g
+103,3,Pasta corta (tipo ditalini),200g
+103,4,"Carne di maiale (prosciutto, lardo)",200g
+104,1,Formaggio pecorino stagionato,300g
+104,2,Uova,5
+104,3,Pane raffermo,150g
+104,4,Passata di pomodoro,1L (per il sugo)
+105,1,Farina 00,100g
+105,2,Uova,3
+105,3,Acqua,250ml
+105,4,Brodo di gallina,1.5L
+105,5,Parmigiano Reggiano,100g
+106,1,Sfoglie per lasagne,250g
+106,2,Carne macinata mista,300g
+106,3,Mozzarella,200g
+106,4,Piselli,150g
+106,5,Uova sode,3
+106,6,Passata di pomodoro,500g
+107,1,Mandorle di Sulmona,200g
+107,2,Zucchero,400g
+107,3,Acqua,100ml
+107,4,"Aromi (vaniglia, cannella)",q.b.
+108,1,Mandorle,200g
+108,2,Semolino,100g
+108,3,Zucchero,200g
+108,4,Uova,5
+108,5,Cioccolato fondente,150g
+109,1,Pesce di piccola taglia (es. alici),1kg
+109,2,Aceto di vino bianco,500ml
+109,3,Zafferano,1 bustina
+109,4,Farina,q.b.
+109,5,Olio per friggere,q.b.
+110,1,"Interiora di agnello (fegato, cuore, polmone)",500g
+110,2,Budello di agnello,q.b.
+110,3,Prezzemolo,q.b.
+110,4,Peperoncino,q.b.
+111,1,Agnello (a pezzi),1kg
+111,2,Uova,3
+111,3,Pecorino grattugiato,100g
+111,4,Piselli,200g
+111,5,Cipolla,1
+112,1,Farina di semola di grano duro,400g
+112,2,Uova,4
+112,3,Carne macinata mista,400g (per il sugo)
+112,4,Passata di pomodoro,500g (per il sugo)
+113,1,Baccalà (ammollato),800g
+113,2,Pangrattato,150g
+113,3,Uvetta,30g
+113,4,Pinoli,30g
+113,5,Noci,30g
+113,6,"Prezzemolo, aglio",q.b.
+114,1,Guanciale di maiale,500g
+114,2,Peperoncino,q.b.
+114,3,Aglio,2 spicchi
+114,4,Vino bianco,q.b.
+115,1,Pancetta di maiale fresca,1kg
+115,2,Peperoncino dolce in polvere,100g
+115,3,Aglio,2 spicchi
+115,4,Sale,q.b.
+116,1,"Carne di maiale (spalla, lardo)",1kg
+116,2,Peperoncino piccante in polvere,q.b.
+116,3,Finocchietto selvatico,q.b.
+116,4,Sale,q.b.
+117,1,Farina di mais,500g
+117,2,"Verdure di campo (cime di rapa, bietole)",1kg
+117,3,Fagioli borlotti,200g
+117,4,Salsiccia di maiale,200g
+118,1,Farina 00,500g (per la pasta)
+118,2,Uova,4 (per la pasta)
+118,3,Formaggio pecorino fresco,400g (per il ripieno)
+118,4,Salsiccia stagionata,100g (per il ripieno)
+119,1,Farina 00,400g (per le sagne)
+119,2,Acqua,200ml (per le sagne)
+119,3,Fagioli cannellini secchi,300g
+119,4,"Sedano, carota, cipolla",per il soffritto
+119,5,Peperoncino,q.b.
+120,1,Farina 00,250g
+120,2,Uova,3
+120,3,Zucchero,3 cucchiai
+120,4,Olio extra vergine d'oliva,3 cucchiai
+120,5,Scorza di limone,1
+121,1,Rafano,1 radice
+121,2,Patate lesse,4
+121,3,Pecorino grattugiato,100g
+121,4,Uova,4
+121,5,Salsiccia stagionata,100g
+122,1,Agnello (a pezzi),1kg
+122,2,Patate,500g
+122,3,Cipolle,2
+122,4,Pomodori,400g
+122,5,Pecorino,100g
+123,1,Semola rimacinata di grano duro,500g
+123,2,Acqua,250ml
+123,3,Lievito di birra,10g
+123,4,Pomodorini,10
+123,5,Olive nere,q.b.
+124,1,Ceci secchi,300g
+124,2,Lagane (pasta fresca larga),300g
+124,3,Aglio,1 spicchio
+124,4,Peperoncino,q.b.
+124,5,Olio extra vergine d'oliva,q.b.
+125,1,Semola rimacinata di grano duro,1kg
+125,2,Lievito madre,200g
+125,3,Acqua,600ml
+125,4,Sale,20g
+126,1,Agnello,1kg
+126,2,Uova,2
+126,3,Pecorino,50g
+126,4,Patate,500g
+126,5,Pomodori,q.b.
+127,1,Peperoni di Senise,250g
+127,2,Olio extra vergine d'oliva,per friggere
+127,3,Sale,q.b.
+128,1,Orecchiette,320g
+128,2,Carne di maiale (salsiccia e costine),400g
+128,3,Pomodori pelati,400g
+128,4,Peperoncino,q.b.
+128,5,Caciocavallo,q.b.
+129,1,Farina 00,500g
+129,2,Zucchero,50g
+129,3,Uova,8
+129,4,Strutto,100g
+129,5,Crema pasticcera,500g
+129,6,Amarene sciroppate,q.b.
+130,1,Semola di grano duro,250g
+130,2,Farina 00,250g
+130,3,Lievito di birra,10g
+130,4,Sale,10g
+130,5,Olio per friggere,q.b.
+131,1,Pomodori ramati,4
+131,2,Mozzarella di bufala,250g
+131,3,Basilico fresco,1 mazzetto
+131,4,Olio extra vergine d'oliva,q.b.
+131,5,Sale e origano,q.b.
+132,1,Spaghetti,320g
+132,2,Olive nere di Gaeta,100g
+132,3,Capperi,50g
+132,4,Acciughe sotto sale,4
+132,5,Prezzemolo,q.b.
+133,1,Farina,500g (per l'impasto)
+133,2,Strutto,100g (per l'impasto)
+133,3,"Salumi misti (salame, cicoli)",400g (per il ripieno)
+133,4,"Formaggi misti (provolone, pecorino)",400g (per il ripieno)
+133,5,Uova sode,4 (per il ripieno)
+134,1,Polpo,1kg
+134,2,Pomodorini,500g
+134,3,Cipolla,1
+134,4,Prezzemolo,q.b.
+134,5,Olio extra vergine d'oliva,q.b.
+135,1,Capocollo di maiale,500g
+135,2,Pancetta,100g
+135,3,Caciocavallo,100g
+135,4,Prezzemolo,q.b.
+136,1,Latte,1L
+136,2,Caglio,q.b.
+136,3,Panna fresca,200ml (per la stracciatella)
+137,1,Caciocavallo Podolico,200g
+137,2,Pane di Matera,4 fette
+138,1,Farina 00,500g
+138,2,Vino bianco secco,150ml
+138,3,Olio extra vergine d'oliva,125ml
+138,4,Sale,10g
+138,5,Semi di finocchio (facoltativo),q.b.
+139,1,Cipolle sponsali (o porri),1kg
+139,2,Olive nere,100g
+139,3,Acciughe sotto sale,4
+139,4,Impasto per pizza,500g
+140,1,Semola rimacinata,500g
+140,2,Lievito di birra,10g
+140,3,Olive nere,100g
+140,4,Pomodorini,10
+141,1,Orecchiette fresche,400g
+141,2,Cime di rapa,1kg
+141,3,Acciughe sott'olio,4 filetti
+141,4,Aglio,2 spicchi
+141,5,Peperoncino,1
+142,1,Cozze,1kg
+142,2,Pangrattato,100g
+142,3,Pecorino grattugiato,50g
+142,4,Prezzemolo,q.b.
+142,5,Aglio,1 spicchio
+143,1,Friselle (o pane biscottato),4
+143,2,Pomodorini,250g
+143,3,Olio extra vergine d'oliva,q.b.
+143,4,Origano,q.b.
+143,5,Aglio (facoltativo),1 spicchio
+144,1,Semola rimacinata di grano duro,1kg
+144,2,Lievito madre,200g
+144,3,Acqua,600ml
+144,4,Sale,20g
+145,1,Pasta frolla,1 panetto
+145,2,Crema pasticcera,500g
+145,3,Amarene sciroppate,q.b.
+146,1,Pasta sfoglia,2 rotoli
+146,2,Besciamella,250ml
+146,3,Pomodoro pelato,200g
+146,4,Mozzarella,150g
+147,1,Farina 00,500g
+147,2,Olio extra vergine d'oliva,100ml
+147,3,Vino bianco,100ml
+147,4,Vincotto di fichi,q.b.
+147,5,Cannella e chiodi di garofano,q.b.
+148,1,Riso Arborio,300g
+148,2,Patate,500g
+148,3,Cozze,1kg
+148,4,Pomodorini,200g
+148,5,Pecorino,50g
+149,1,"Carne di maiale (lardo, guanciale, pancetta)",1kg
+149,2,Peperoncino piccante calabrese,300g
+149,3,Sale,q.b.
+150,1,Carne di maiale (coscia e lardo),1kg
+150,2,Pepe nero in grani,q.b.
+150,3,Finocchietto selvatico,q.b.
+151,1,Stoccafisso (ammollato),800g
+151,2,Pomodori pelati,500g
+151,3,Olive verdi,100g
+151,4,Capperi,50g
+151,5,Patate,2
+152,1,Semola rimacinata,500g (per la pasta)
+152,2,Carne di maiale,300g (per il sugo)
+152,3,Ricotta salata,q.b.
+152,4,Peperoncino,q.b.
+153,1,Fave secche decorticate,500g
+153,2,Finocchietto selvatico,1 mazzetto
+153,3,Olio extra vergine d'oliva,q.b.
+153,4,Sale e pepe,q.b.
+154,1,Pesce spada,4 fette
+154,2,Pomodorini,300g
+154,3,Capperi,1 cucchiaio
+154,4,Olive nere,50g
+154,5,Peperoncino,q.b.
+155,1,Farina di semola,500g
+155,2,Acqua,250ml
+155,3,Nduja,100g (per il sugo)
+155,4,Passata di pomodoro,400g (per il sugo)
+156,1,Fave di cacao,100g
+156,2,Zucchero,50g
+156,3,"Spezie (cannella, vaniglia, peperoncino)",q.b.
+157,1,Gelato alla nocciola,250g
+157,2,Gelato al cioccolato,250g
+157,3,Cuore di cioccolato fuso,q.b.
+157,4,Cacao amaro in polvere,q.b.
+158,1,Farina 00,500g
+158,2,Uova,2
+158,3,Strutto,100g
+158,4,"Noci, uvetta, mandorle",per il ripieno
+158,5,Miele o mosto cotto,per il ripieno
+159,1,"Interiora di vitello (trippa, polmone, cuore)",1kg
+159,2,Passata di pomodoro,500g
+159,3,Peperoncino piccante,q.b.
+159,4,Alloro,2 foglie
+160,1,Fagioli borlotti freschi,500g
+160,2,Pasta all'uovo (tipo tagliatelle rotte),200g
+160,3,Lardo,50g
+160,4,"Sedano, carota, cipolla",per il soffritto
+161,1,Formaggio Asiago,200g
+161,2,Pane casereccio,4 fette
+161,3,Miele di acacia,q.b.
+162,1,Farina Manitoba,600g
+162,2,Uova,4
+162,3,Zucchero,150g
+162,4,Burro,250g
+162,5,Lievito di birra,20g
+162,6,Estratto di vaniglia,1 cucchiaino
+163,1,Carne di manzo (guancia o spalla),1kg
+163,2,Amarone della Valpolicella,750ml
+163,3,"Sedano, carote, cipolla",per il soffritto
+163,4,Brodo di carne,q.b.
+164,1,Farina 00,250g
+164,2,Zucchero,200g
+164,3,Mandorle,200g
+164,4,Uova,2
+164,5,Lievito per dolci,1/2 bustina
+165,1,Lardo di Colonnata,200g
+165,2,Pane toscano,4 fette
+165,3,Pomodorini,4
+166,1,Pane toscano raffermo,400g
+166,2,Pomodori maturi,500g
+166,3,Cipolla rossa di Tropea,1
+166,4,Cetriolo,1
+166,5,Basilico,q.b.
+167,1,Lampredotto (stomaco bovino),500g
+167,2,Pane (rosetta o semelle),2 panini
+167,3,Brodo di carne,q.b.
+167,4,Salsa verde,q.b.
+168,1,Farina 00,200g
+168,2,Uova,3
+168,3,Acqua,250ml
+168,4,Pecorino toscano grattugiato,100g
+168,5,Sale,q.b.
+169,1,Finocchiona (salame),200g
+169,2,Pane toscano,4 fette
+170,1,Pane toscano raffermo,300g
+170,2,Fagioli cannellini,300g
+170,3,Cavolo nero,1 mazzo
+170,4,Verza,1-Feb
+170,5,Pomodori pelati,400g
+171,1,"Pesce misto da zuppa (scorfano, gallinella, polpo)",1.5kg
+171,2,Pomodori pelati,500g
+171,3,Concentrato di pomodoro,2 cucchiai
+171,4,Vino rosso,1 bicchiere
+171,5,Pane toscano abbrustolito,4 fette
+172,1,Bistecca di manzo (costata o filetto),1.2kg (alta 5-6 cm)
+172,2,Sale grosso,q.b.
+172,3,Pepe nero,q.b.
+172,4,Olio extra vergine d'oliva,q.b.
+173,1,Pici (pasta fresca),400g
+173,2,Aglio,6 spicchi
+173,3,Pomodorini,400g
+173,4,Peperoncino,1
+173,5,Vino bianco,1/2 bicchiere
+174,1,Farina 00,500g
+174,2,Acqua,300ml
+174,3,Lievito di birra,10g
+174,4,Olio extra vergine d'oliva,50ml
+174,5,Sale grosso,q.b.
+175,1,Farina 00,500g
+175,2,Acqua,250ml
+175,3,Bicarbonato,1 pizzico
+175,4,Sale,q.b.
+176,1,Pane raffermo,300g
+176,2,Cipolle,2
+176,3,Pomodori maturi,500g
+176,4,Sedano e carote,q.b.
+176,5,Basilico,q.b.
+177,1,Pane casereccio,4 fette
+177,2,Aglio,1 spicchio
+177,3,Pomodorini,200g
+177,4,Olio extra vergine d'oliva,q.b.
+177,5,Basilico,q.b.
+178,1,Pane toscano raffermo,500g
+178,2,Pomodori pelati,800g
+178,3,Aglio,2 spicchi
+178,4,Basilico,1 mazzetto
+178,5,Brodo vegetale,q.b.
+179,1,Strangozzi (pasta fresca),400g
+179,2,Tartufo nero pregiato,50g
+179,3,Aglio,1 spicchio
+179,4,Olio extra vergine d'oliva,q.b.
+180,1,Farina di castagne,300g
+180,2,Acqua,400ml
+180,3,Pinoli,50g
+180,4,Uvetta,50g
+180,5,Noci,50g
+180,6,Rosmarino,1 rametto
+181,1,Fagiolina del Trasimeno (secca),300g
+181,2,Aglio,2 spicchi
+181,3,Salvia,q.b.
+181,4,Olio extra vergine d'oliva,q.b.
+181,5,Pomodorini,200g
+182,1,Farro di Monteleone di Spoleto,320g
+182,2,Pancetta,100g
+182,3,Pomodorini,300g
+182,4,Pecorino grattugiato,q.b.
+183,1,"Legumi misti secchi (fave, ceci, fagioli)",400g
+183,2,Mais,100g
+183,3,Lardo,50g
+183,4,Aglio e cipolla,per il soffritto
+184,1,Mele,1kg
+184,2,Noci,100g
+184,3,Uvetta,50g
+184,4,Zucchero,100g
+184,5,Pasta sfoglia o brisée,2 rotoli
+185,1,Farina 00,500g
+185,2,Zucchero,250g
+185,3,Uova,5
+185,4,Strutto,100g
+185,5,Alchermes,1 bicchierino
+185,6,Meringa,per la copertura
+186,1,"Coratella di agnello (cuore, fegato, polmoni)",500g
+186,2,Cipolla,1
+186,3,Aceto di vino bianco,1/2 bicchiere
+186,4,Peperoncino,q.b.
+187,1,Panna fresca liquida,500ml
+187,2,Semola di grano duro,50g
+187,3,Miele,1 cucchiaio
+187,4,Sale,q.b.
+188,1,Farina di ceci,300g
+188,2,Acqua,900ml
+188,3,Olio extra vergine d'oliva,100ml
+188,4,Sale e pepe nero,q.b.
+189,1,Semola di grano duro rimacinata,500g
+189,2,Acqua,250ml
+189,3,Lievito di birra,7g
+189,4,Sale,10g
+190,1,Fegatini di maiale,300g
+190,2,Rete di maiale,q.b.
+190,3,Alloro,q.b.
+190,4,Sale e pepe,q.b.
+191,1,Bottarga di muggine,100g
+191,2,Spaghetti,320g
+191,3,Aglio,1 spicchio
+191,4,Peperoncino,q.b.
+191,5,Prezzemolo,q.b.
+192,1,Semola di grano duro,300g (per la pasta)
+192,2,Patate,500g (per il ripieno)
+192,3,Pecorino sardo fresco,200g (per il ripieno)
+192,4,Menta fresca,q.b. (per il ripieno)
+192,5,Aglio,1 spicchio (per il ripieno)
+193,1,Pecorino Sardo DOP,200g
+193,2,Pane carasau,4 fogli
+193,3,Miele di corbezzolo,q.b.
+194,1,Pane carasau,4 fogli
+194,2,Passata di pomodoro,400g
+194,3,Uova,4
+194,4,Pecorino sardo grattugiato,100g
+195,1,Fregula sarda,320g
+195,2,Arselle (vongole),1kg
+195,3,Pomodorini,200g
+195,4,Aglio,1 spicchio
+195,5,Prezzemolo,q.b.
+196,1,Malloreddus (gnocchetti sardi),400g
+196,2,Salsiccia fresca sarda,300g
+196,3,Passata di pomodoro,500g
+196,4,Cipolla,1
+196,5,Zafferano,1 bustina
+196,6,Pecorino sardo,q.b.
+197,1,Pane raffermo di semola,500g
+197,2,Formaggio pecorino fresco,300g
+197,3,Brodo di pecora,2L
+197,4,Prezzemolo,q.b.
+198,1,Bacche di mirto,500g
+198,2,Alcol puro 95°,500ml
+198,3,Zucchero,400g
+198,4,Acqua,500ml
+199,1,Semola di grano duro,200g (per la pasta)
+199,2,Strutto,50g (per la pasta)
+199,3,Formaggio pecorino fresco,300g (per il ripieno)
+199,4,Scorza di limone,q.b. (per il ripieno)
+199,5,Miele (di corbezzolo o millefiori),q.b. (per servire)
+199,6,Olio per friggere,q.b.
+200,1,Maialino da latte (su porceddu),1 (circa 4-5 kg)
+200,2,Sale,q.b.
+200,3,Mirto,alcuni rametti
+200,4,Lardo,100g

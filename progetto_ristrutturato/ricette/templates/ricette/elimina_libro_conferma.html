@@ -1,0 +1,17 @@
+{% extends 'ricette/base.html' %}
+
+{% block title %}Conferma Eliminazione{% endblock %}
+
+{% block content %}
+    <h2>Conferma Eliminazione</h2>
+    <p>Sei sicuro di voler eliminare il libro "<strong>{{ libro.titolo }}</strong>"?</p>
+    <p>Questa azione è irreversibile.</p>
+
+    <form method="POST" style="margin-top: 2rem;">
+        {% csrf_token %}
+
+        <button type="submit" class="button-delete">Sì, Elimina</button>
+
+        <a href="{% url 'elenco-libri' %}" class="button-secondary">Annulla</a>
+    </form>
+{% endblock %}

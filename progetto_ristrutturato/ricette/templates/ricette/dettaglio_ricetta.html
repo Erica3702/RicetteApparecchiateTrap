@@ -1,0 +1,30 @@
+{% extends 'ricette/base.html' %}
+
+{% block title %}Dettaglio: {{ ricetta.titolo }}{% endblock %}
+
+{% block content %}
+    <h2>Dettagli per: {{ ricetta.titolo }}</h2>
+
+    <div class="dettaglio-container">
+        <h3>Ingredienti</h3>
+        
+        {% if ingredienti %}
+            <div class="ingredienti-lista">
+                <ul>
+                    {% for item in ingredienti %}
+                        <li>
+                            <span class="nome-ingrediente">{{ item.ingrediente }}</span>
+                            <span class="quantita-ingrediente">{{ item.quantità }}</span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% else %}
+            <p>Nessun ingrediente specificato per questa ricetta.</p>
+        {% endif %}
+    </div>
+
+    <a href="{% url 'elenco-ricette' %}" class="button-secondary" style="margin-top: 2rem;">
+        &larr; Torna all'elenco
+    </a>
+{% endblock %}

@@ -1,0 +1,22 @@
+<aside class="sidebar">
+    <nav class="main-nav">
+        <ul>
+            <li><a href="{% url 'home' %}">HOME</a></li>
+            
+            <li class="has-submenu">
+                <a href="#">GESTIONE LIBRI</a>
+                <ul class="submenu">
+                    <li><a href="{% url 'crea-libro' %}">NUOVO LIBRO</a></li>
+                    <li><a href="{% url 'elenco-libri' %}">GESTISCI LIBRI</a></li>
+                </ul>
+            </li>
+
+            <li class="has-submenu">
+                <a href="#">GESTIONE ARCHIVIO</a>
+                <ul class="submenu">
+                    <li><a href="{% url 'elenco-ricette' %}">VISUALIZZA RICETTE</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</aside>
