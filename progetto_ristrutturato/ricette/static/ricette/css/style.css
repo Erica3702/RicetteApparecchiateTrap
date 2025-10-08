@@ -67,7 +67,7 @@ body {
     background-color: #b89f62;
 }
 
-/* Colonna Centrale (Content)  */
+/* Colonna Centrale  */
 .content {
     flex-basis: 60%;      
     padding: 2.5rem 4rem;
