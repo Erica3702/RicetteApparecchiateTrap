@@ -1,12 +1,8 @@
-/* IMPOSTAZIONI GENERALI E FONT  */
+/* IMPOSTAZIONI GENERALI E FONT */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
@@ -15,6 +11,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* HEADER CON IMMAGINE (SOLO PER LA HOME) */
 .hero-header {
     height: 100vh;
     background-image: url('../images/background_header.png'); 
@@ -28,7 +25,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .hero-header h1 {
     font-family: 'Chonburi', serif;
     font-size: 4rem;
@@ -38,66 +34,51 @@ body {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
+/* ========== MODIFICA CHIAVE PER LE LINEE DORATE ========== */
 
-/*STRUTTURA A TRE COLONNE  */
-
-.main-container {
-    display: flex;
-    width: 100%;
+/* Rendo le colonne "contenitori" per le linee */
+.vertical-divider-right,
+.vertical-divider-left {
+    position: relative; /* Indispensabile per posizionare le linee */
 }
 
-/* Colonna Sinistra (Sidebar)  */
-.sidebar {
-    flex-basis: 20%;        
-    background-color: #05080f;
-    min-height: 100vh;
-    padding: 2rem;
-    position: relative;     
-}
-
-/* Linea dorata a destra della sidebar */
-.sidebar::after {
+/* Linea dorata a DESTRA della sidebar */
+.vertical-divider-right::after {
     content: '';
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    height: 75%;
+    height: 75%; /* Altezza della linea */
     width: 2px;
     background-color: #b89f62;
 }
 
-/* Colonna Centrale  */
-.content {
-    flex-basis: 60%;      
-    padding: 2.5rem 4rem;
-    background-color: #05080f;
-}
-
-/* Colonna Destra (Vuota)  */
-.right-column {
-    flex-basis: 20%;        
-    background-color: #05080f; 
-    position: relative;     
-}
-
-/* Linea dorata a sinistra della colonna destra */
-.right-column::before {
+/* Linea dorata a SINISTRA della colonna vuota */
+.vertical-divider-left::before {
     content: '';
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    height: 75%;
+    height: 75%; /* Altezza della linea */
     width: 2px;
     background-color: #b89f62;
 }
+/* ======================================================== */
 
+.sidebar-content {
+    position: sticky;
+    top: 2rem;
+}
 
-/* ELEMENTI INTERNI (NAVIGAZIONE, CARD, ECC)  */
-.main-nav ul { list-style-type: none; margin-top: 0.4rem; }
+.site-title {
+    margin-bottom: 2rem;
+}
+
+/* ELEMENTI INTERNI (NAVIGAZIONE, CARD, ECC) */
+.main-nav ul { list-style-type: none; margin-top: 0.4rem; padding: 0; }
 .main-nav ul li { margin-bottom: 0.8rem; }
-
 .main-nav ul li a {
     color: #f2f2f2;
     text-decoration: none;
@@ -106,39 +87,25 @@ body {
     display: block;
     transition: color 0.3s;
 }
-
 .main-nav .submenu a {
     font-size: 1rem; 
     font-weight: normal; 
     margin-bottom: 0.5rem;
 }
-
 .main-nav ul li a:hover { color: #b89f62; }
-.main-nav ul li.active > a { color: #b89f62; }
-.submenu { list-style-type: none; display: none; padding-left: 1rem; margin-top: 0rem; }
-
-
+.submenu { list-style-type: none; padding-left: 1rem; margin-top: 0rem; }
 .submenu li a {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     font-weight: normal; 
     margin-bottom: 0.5rem;
 }
 
-.content h2 { font-family: 'Sorts Mill Goudy', serif; font-size: 2.2rem; color: #f2f2f2; margin-bottom: 2rem; }
-.ricette-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; align-items: start; margin-bottom: 4rem; }
-.recipe-card { text-align: center; }
-.recipe-card img { width: 100%; max-width: 250px; height: auto; object-fit: cover; margin-bottom: 1rem; }
-.recipe-card h3 { font-family: 'Sorts Mill Goudy', serif; font-size: 1.2rem; color: #f2f2f2; }
-.statistiche-container { display: flex; justify-content: space-around; gap: 2rem; }
-
-
-/*STILE STATISTICHE */
-
+/* STILE STATISTICHE */
 .statistiche-container { 
     display: flex; 
-    justify-content: space-around; 
+    justify-content: center;
     gap: 2rem;
-    flex-wrap: wrap; /* Permette di andare a capo su schermi piccoli */
+    flex-wrap: wrap; 
 }
 
 .stat-card {
@@ -149,32 +116,26 @@ body {
     width: 220px; 
     height: 220px;
     padding: 1.5rem;
-    
-    /* Comandi per centrare il contenuto */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0.5rem; 
-    
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transizione fluida */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .stat-card:hover {
-    transform: translateY(-10px); /* Si solleva al passaggio del mouse */
-    box-shadow: 0 8px 25px rgba(184, 159, 98, 0.4); /* L'ombra diventa dorata */
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(184, 159, 98, 0.4);
 }
-
-/* Stile per il titolo */
 .stat-card h3 {
     font-family: 'Sorts Mill Goudy', serif;
     font-size: 1.2rem;
     color: #cccccc;
     font-weight: normal;
     margin: 0;
+    text-align: center;
 }
-
-/* Stile per il numero grande */
 .stat-card .stat-number {
     font-family: 'Chonburi', serif;
     font-size: 4rem; 
@@ -184,48 +145,29 @@ body {
     margin: 0;
 }
 
-/* FOOTER CON TESTO CENTRATO */
+/* FOOTER */
 .main-footer {
     width: 100%;
-    padding: 1.5rem 1rem;       
-    background-color: #05080f;
-    text-align: center;         
-    position: relative;
-    padding-top: 1.6rem;
+    padding: 1.5rem 1rem;      
+    background-color: #0f0f0f;
+    text-align: center;        
     font-family: 'Sorts Mill Goudy', serif;
     color: #aaa;
     font-size: 0.9rem;
+    border-top: 1px solid #b89f62;
 }
-
-
-.main-footer::before {
-    content: '';
-    position: absolute;
-    top: -1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 65%;
-    height: 1px;
-    background-color: #b89f62;
-    border-radius: 2px;
-}
-
-.main-footer p {
-    margin: 0.25rem 0;
-}
-
 
 /* Stile per i form CRUD */
 .form-crud { max-width: 80%; margin: 0 auto; }
 .form-group { margin-bottom: 1.5rem; }
 .form-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; color: #b89f62; }
-.form-group input { width: 100%; padding: 0.8rem; border-radius: 5px; border: 1px solid #555; background-color: #1a1a1a; color: #f2f2f2; font-size: 1rem; }
+.form-group input, .form-group select { width: 100%; padding: 0.8rem; border-radius: 5px; border: 1px solid #555; background-color: #1a1a1a; color: #f2f2f2; font-size: 1rem; }
 
 
 /* TABELLE */
 .table-crud {
-    width: 100%;               
-    border-collapse: collapse;     
+    width: 100%;              
+    border-collapse: collapse;    
     margin-top: 2rem;
     font-size: 1rem;
 }
@@ -235,8 +177,8 @@ body {
 }
 
 .table-crud th {
-    color: #b89f62;             
-    padding: 1rem;              
+    color: #b89f62;            
+    padding: 1rem;             
     text-align: left;
     font-family: 'Sorts Mill Goudy', serif;
     font-size: 1.2rem;
@@ -262,11 +204,7 @@ body {
     gap: 0.5rem; 
 }
 
-/* =================================
-   STILE UNIFICATO PER I PULSANTI
-   ================================= */
-
-/* Stile di base condiviso da tutti gli elementi (sia <a> che <button>) */
+/* STILE UNIFICATO PER I PULSANTI */
 .button-primary,
 .button-secondary,
 .button-edit,
@@ -283,160 +221,30 @@ body {
     transition: all 0.2s ease-in-out; 
 }
 
-/* Stile per i pulsanti più piccoli nella tabella */
 .table-crud .button-edit,
 .table-crud .button-delete {
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
 }
 
-/* Colori specifici per ogni tipo di pulsante */
-.button-primary {
-    background-color: #b89f62; 
-    color: #05080f; 
-}
-.button-secondary {
-    background-color: #555; 
-    color: #f2f2f2; 
-    border-color: #777;
-}
-.button-edit { 
-    background-color: #b89f62;
-    color: #05080f; 
-}
-.button-delete { 
-    background-color: #c0392b;
-    color: #f2f2f2;
-}
+.button-primary { background-color: #b89f62; color: #05080f; }
+.button-secondary { background-color: #555; color: #f2f2f2; border-color: #777; }
+.button-edit { background-color: #b89f62; color: #05080f; }
+.button-delete { background-color: #c0392b; color: #f2f2f2; }
 
-/* Effetti al passaggio del mouse (hover) */
-.button-primary:hover,
-.button-edit:hover {
-    background-color: #d1b87a; 
-    transform: translateY(-2px); 
-}
-.button-secondary:hover {
-    background-color: #777;
-    transform: translateY(-2px); 
-}
-.button-delete:hover { 
-    background-color: #e74c3c;
-    transform: translateY(-2px); 
-}
+.button-primary:hover, .button-edit:hover { background-color: #d1b87a; transform: translateY(-2px); }
+.button-secondary:hover { background-color: #777; transform: translateY(-2px); }
+.button-delete:hover { background-color: #e74c3c; transform: translateY(-2px); }
 
 
-/* STILE PER IL FORM DEI FILTRI  */
-.filter-container {
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #666;
-}
-
-.filter-container h4 {
+/* STILE PER IL FORM DEI FILTRI */
+.filter-form h4 {
     font-family: 'Sorts Mill Goudy', serif;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     color: #f2f2f2;
 }
-
-.filter-form .form-group {
-    margin-bottom: 1rem;
-}
-
-.filter-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-    font-weight: bold;
-}
-
-.filter-form input[type="text"],
-.filter-form select {
-    width: 100%;
-    padding: 0.75rem;
-    background-color: #1f1f1f;
-    border: 1px solid #555;
-    border-radius: 5px;
-    color: #f2f2f2;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.filter-form .button-group {
-    margin-top: 1.5rem;
-    display: flex;
-    gap: 1rem;
-}
-
-
-/*STILE PER I MESSAGGI DI STATO  */
-.success-message,
-.success-message2 {
-    background-color: #27ae60; 
-    color: white;
-    padding: 1rem;
-    border-radius: 5px;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.error-message2 {
-    background-color: #c0392b; 
-    color: white;
-    padding: 1rem;
-    border-radius: 5px;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-
-/* DETTAGLIO RICETTA */
-.table-crud td a {
-    color: inherit;
-    text-decoration: none;
-    display: block; /* Fa in modo che il link occupi tutta la cella */
-}
-
-.dettaglio-container {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background-color: #1a1a1a; 
-    border: 1px solid #333;
-    border-radius: 5px;
-}
-
-.dettaglio-container h3 {
-    font-family: 'Georgia', serif; 
-    color: #c5b358; 
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px solid #444;
-    padding-bottom: 0.5rem;
-}
-
-.ingredienti-lista ul {
-    list-style: none; 
-    padding: 0;
-    margin: 0;
-}
-
-.ingredienti-lista li {
-    display: flex; 
-    justify-content: space-between; /* mette il nome a sinistra e la quantità a destra */
-    align-items: center;
-    padding: 0.8rem 0.5rem;
-    border-bottom: 1px solid #333; 
-    font-size: 1rem;
-}
-
-.ingredienti-lista li:last-child {
-    border-bottom: none;
-}
-
-.nome-ingrediente {
-    color: #f0f0f0; 
-}
-
-.quantita-ingrediente {
-    color: #aaa; 
-    font-weight: bold;
-}
+.filter-form .form-group { margin-bottom: 1rem; }
+.filter-form label { display: block; margin-bottom: 0.5rem; font-size: 0.9rem; font-weight: bold; }
+.filter-form input[type="text"], .filter-form select { width: 100%; padding: 0.75rem; background-color: #1f1f1f; border: 1px solid #555; border-radius: 5px; color: #f2f2f2; font-family: 'Montserrat', sans-serif; }
+.filter-form .button-group { margin-top: 1.5rem; display: flex; gap: 1rem; }

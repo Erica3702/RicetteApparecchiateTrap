@@ -1,0 +1,45 @@
+<div class="filter-container">
+    <h4>Filtra Ricette</h4>
+
+    <form method="get" action="{% url 'elenco-ricette' %}" class="filter-form">
+        <div class="form-group">
+            <label for="nome">Nome Ricetta</label>
+            <input type="text" id="nome" name="nome" value="{{ nome_selezionato }}">
+        </div>
+
+        <div class="form-group">
+            <label for="tipo">Categoria</label>
+            <select id="tipo" name="tipo">
+                <option value="">Tutte</option>
+                {% for tipo in tipi_disponibili %}
+                    <option value="{{ tipo }}" {% if tipo == tipo_selezionato %}selected{% endif %}>{{ tipo|capfirst }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="regione">Regione</label>
+            <select id="regione" name="regione">
+                <option value="">Tutte</option>
+                {% for regione in tutte_le_regioni %}
+                    <option value="{{ regione.cod }}" {% if regione.cod == regione_selezionata %}selected{% endif %}>{{ regione.nome }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="libro">Ricettario</label>
+            <select id="libro" name="libro">
+                <option value="">Tutti</option>
+                {% for libro in tutti_i_libri %}
+                    <option value="{{ libro.codISBN }}" {% if libro.codISBN == libro_selezionato %}selected{% endif %}>{{ libro.titolo }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="button-primary">Filtra</button>
+            <a href="{% url 'elenco-ricette' %}" class="button-secondary">Reset</a>
+        </div>
+    </form>
+</div>
