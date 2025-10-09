@@ -148,9 +148,9 @@ body {
 /* FOOTER */
 .main-footer {
     width: 100%;
-    padding: 1.5rem 1rem;      
+    padding: 1.5rem 1rem;       
     background-color: #0f0f0f;
-    text-align: center;        
+    text-align: center;         
     font-family: 'Sorts Mill Goudy', serif;
     color: #aaa;
     font-size: 0.9rem;
@@ -166,7 +166,7 @@ body {
 
 /* TABELLE */
 .table-crud {
-    width: 100%;              
+    width: 100%;            
     border-collapse: collapse;    
     margin-top: 2rem;
     font-size: 1rem;
@@ -177,15 +177,15 @@ body {
 }
 
 .table-crud th {
-    color: #b89f62;            
-    padding: 1rem;             
+    color: #b89f62;           
+    padding: 1rem;            
     text-align: left;
     font-family: 'Sorts Mill Goudy', serif;
     font-size: 1.2rem;
 }
 
 .table-crud td {
-    padding: 1rem;             
+    padding: 1rem;            
     border-bottom: 1px solid #333; 
 }
 
@@ -248,3 +248,53 @@ body {
 .filter-form label { display: block; margin-bottom: 0.5rem; font-size: 0.9rem; font-weight: bold; }
 .filter-form input[type="text"], .filter-form select { width: 100%; padding: 0.75rem; background-color: #1f1f1f; border: 1px solid #555; border-radius: 5px; color: #f2f2f2; font-family: 'Montserrat', sans-serif; }
 .filter-form .button-group { margin-top: 1.5rem; display: flex; gap: 1rem; }
+
+
+/* ======================================================== */
+/* == STILE PER I MESSAGGI DI NOTIFICA (DJANGO MESSAGES) == */
+/* ======================================================== */
+
+.messages {
+    list-style: none;
+    padding: 0;
+    /* Imposto la larghezza massima per allinearsi con i form */
+    max-width: 80%; 
+    margin: 0 auto 2rem auto; /* Centra il blocco e aggiunge spazio sotto */
+}
+
+.messages li {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+/* Banner verde per messaggi di successo (modifica, creazione, eliminazione) */
+.messages li.success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+/* Banner rosso per messaggi di errore */
+.messages li.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+/* Banner giallo per messaggi di avviso */
+.messages li.warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+/* Banner blu per messaggi informativi */
+.messages li.info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}

@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Ricetta, Ingrediente, Regione, Pagina, Libro
 from .forms import LibroForm
+from django.contrib import messages
 
 
 def home_view(request):
@@ -98,7 +99,7 @@ def crea_libro_view(request):
         form = LibroForm(request.POST)
         if form.is_valid():
             form.save() # Salva il nuovo libro nel database
-            # Reindirizza a una pagina di successo (per ora la home)
+            messages.success(request, f'Il libro è stato creato con successo!')
             return redirect('home') 
     else:
         # Se è la prima visita (GET), mostra un form vuoto
@@ -124,6 +125,7 @@ def modifica_libro_view(request, codISBN):
         form = LibroForm(request.POST, instance=libro) # Popola il form con i dati inviati e l'istanza esistente
         if form.is_valid():
             form.save()
+            messages.success(request, f'Il libro "{libro.titolo}" è stato aggiornato con successo!')
             return redirect('elenco-libri') # Torna all'elenco dopo aver salvato
     else:
         form = LibroForm(instance=libro) # Mostra il form pre-compilato con i dati del libro
@@ -141,6 +143,7 @@ def elimina_libro_view(request, codISBN):
     libro = get_object_or_404(Libro, pk=codISBN)
     if request.method == 'POST': # Per sicurezza, eliminiamo solo tramite POST
         libro.delete()
+        messages.success(request, f'Il libro "{libro.titolo}" è stato eliminato con successo.')
         return redirect('elenco-libri')
     
     # Se la richiesta non è POST, mostriamo una pagina di conferma
