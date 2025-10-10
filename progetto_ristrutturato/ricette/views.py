@@ -8,14 +8,12 @@ def home_view(request):
     """
     Mostra la pagina principale del sito con le statistiche.
     """
-    # Eseguiamo le query per contare gli elementi nel database
+    # query per contare gli elementi nel database
     numero_ricette = Ricetta.objects.count()
     numero_libri = Libro.objects.count()
     numero_ingredienti = Ingrediente.objects.count()
-    # Aggiungi altre statistiche che desideri
     # numero_regioni = Regione.objects.count() 
 
-    # Passiamo i dati al template tramite il dizionario 'context'
     context = {
         'numero_ricette': numero_ricette,
         'numero_libri': numero_libri,
@@ -24,7 +22,7 @@ def home_view(request):
     return render(request, 'ricette/home.html', context)
 
 
-# QUESTA È LA VIEW PER L'ELENCO COMPLETO DELLE RICETTE (l'avevamo già creata)
+# VIEW PER L'ELENCO COMPLETO DELLE RICETTE
 def elenco_ricette_view(request):
     """
     Mostra l'elenco di tutte le ricette, con la possibilità di filtrarle
@@ -37,7 +35,7 @@ def elenco_ricette_view(request):
     libro_selezionato = request.GET.get('libro', '')
 
     # 2. Inizia con la query di base che prende tutte le ricette
-    #    Usiamo .distinct() per evitare duplicati se una ricetta appare in più regioni/libri filtrati
+    # .distinct() per evitare duplicati se una ricetta appare in più regioni/libri filtrati
     lista_ricette = Ricetta.objects.all().order_by('titolo').distinct()
 
     # 3. Applica i filtri uno dopo l'altro se sono stati specificati
@@ -63,7 +61,7 @@ def elenco_ricette_view(request):
         'tutti_i_libri': Libro.objects.all().order_by('titolo'),
         'tipi_disponibili': ['antipasto', 'primo', 'secondo', 'contorno', 'dessert'],
         
-        # Passiamo i valori selezionati per pre-compilare il form
+        #valori selezionati per pre-compilare il form
         'nome_selezionato': nome_selezionato,
         'regione_selezionata': regione_selezionata,
         'tipo_selezionato': tipo_selezionato,
@@ -73,14 +71,13 @@ def elenco_ricette_view(request):
     return render(request, 'ricette/elenco_ricette.html', context)
 
 
-# QUESTA È LA NUOVA VIEW PER IL DETTAGLIO DI UNA SINGOLA RICETTA
+# VIEW PER IL DETTAGLIO DI UNA SINGOLA RICETTA
 def dettaglio_ricetta_view(request, numero_ricetta):
     # 1. Recupera la ricetta usando il suo 'numero' (la chiave primaria)
     ricetta = get_object_or_404(Ricetta, numero=numero_ricetta)
     
-    # 2. Recupera tutti gli oggetti 'Ingrediente' che sono
-    #    collegati a questa ricetta.
-    #    (Assumendo che il campo ForeignKey nel modello Ingrediente si chiami 'ricetta')
+    # 2. Recupera tutti gli oggetti 'Ingrediente' che sono collegati a questa ricetta.
+   
     ingredienti_della_ricetta = Ingrediente.objects.filter(ricetta=ricetta)
 
     # 3. Passa entrambi al context del template
@@ -109,9 +106,9 @@ def crea_libro_view(request):
     }
     return render(request, 'ricette/crea_libro.html', context)
 
-# NUOVA VIEW PER L'ELENCO DEI LIBRI
+# VIEW PER L'ELENCO DEI LIBRI
 def elenco_libri_view(request):
-    tutti_i_libri = Libro.objects.all().order_by('titolo') # Ordiniamo i libri per titolo
+    tutti_i_libri = Libro.objects.all().order_by('titolo') # Ordina i libri per titolo
     context = {
         'lista_libri': tutti_i_libri
     }
@@ -137,10 +134,10 @@ def modifica_libro_view(request, codISBN):
 
 
 
-# NUOVA VIEW PER ELIMINARE UN LIBRO
+# VIEW PER ELIMINARE UN LIBRO
 def elimina_libro_view(request, codISBN):
     libro = get_object_or_404(Libro, pk=codISBN)
-    if request.method == 'POST': # Per sicurezza, eliminiamo solo tramite POST
+    if request.method == 'POST': # Per sicurezza, elimina solo tramite POST
         libro.delete()
         messages.success(request, f'Il libro "{libro.titolo}" è stato eliminato con successo.')
         return redirect('elenco-libri')

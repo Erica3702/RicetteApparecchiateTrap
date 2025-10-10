@@ -19,7 +19,6 @@ class LibroForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        # Questa parte rimane utile per l'interfaccia utente,
         # rende il campo non editabile nella pagina di modifica.
         if self.instance and self.instance.pk:
             self.fields['codISBN'].disabled = True
@@ -39,13 +38,12 @@ class LibroForm(forms.ModelForm):
             queryset = queryset.exclude(pk=self.instance.pk)
         
         # Se, dopo aver escluso il libro corrente, la query trova ancora qualcosa,
-        # significa che un ALTRO libro ha lo stesso ISBN.
+        # significa che un altro libro ha lo stesso ISBN.
         if queryset.exists():
             raise forms.ValidationError("Attenzione: un altro libro è già registrato con questo codice ISBN.")
             
         return codice
     
-# --------------------------------------------------------------------
 
 # Form per FILTRARE l'elenco delle Ricette
 class RicettaFilterForm(forms.Form):

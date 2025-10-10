@@ -20,14 +20,14 @@ class Pagina(models.Model):
     numeroPagina = models.IntegerField()
 
     class Meta:
-        # Questo simula la chiave primaria composta del diagramma
+        # simula la chiave primaria composta del diagramma
         unique_together = ('libro', 'numeroPagina')
 
     def __str__(self):
         return f"{self.libro.titolo} - Pag. {self.numeroPagina}"
 
 class Ricetta(models.Model):
-    # Tipi di ricetta permessi, come da diagramma
+    # Tipi di ricetta permessi
     class TipoRicetta(models.TextChoices):
         ANTIPASTO = 'antipasto', 'Antipasto'
         PRIMO = 'primo', 'Primo'
@@ -53,7 +53,6 @@ class Ingrediente(models.Model):
     quantità = models.CharField(max_length=50)
 
     class Meta:
-        # 2. Ora il nome del campo è corretto
         unique_together = ('ricetta', 'numero')
 
     def __str__(self):
@@ -65,6 +64,5 @@ class RicettaRegionale(models.Model):
     ricetta = models.ForeignKey(Ricetta, on_delete=models.CASCADE)
 
 class RicettaPubblicata(models.Model):
-    # Basta un solo ForeignKey a Pagina, che già contiene il libro e il numero
     pagina = models.ForeignKey(Pagina, on_delete=models.CASCADE)
     ricetta = models.ForeignKey(Ricetta, on_delete=models.CASCADE)
