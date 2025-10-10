@@ -2,16 +2,24 @@
 
 {% block title %}Elenco di Tutte le Ricette{% endblock %}
 
+
 {% block sidebar %}
-    <form method="GET" action="{% url 'elenco-ricette' %}" class="filtri-container">
+    {# 1. Includi la sidebar originale da base.html #}
+    {{ block.super }}
+
+    {# 2. Aggiungi un separatore per un aspetto più pulito #}
+    <hr style="border-top: 1px solid #b89f62; margin-top: 2rem; margin-bottom: 2rem;">
+
+    {# 3. Inserisci il tuo form per i filtri #}
+    <form method="GET" action="{% url 'elenco-ricette' %}" class="filter-form">
         <h4>Filtra Ricette</h4>
 
-        <div class="filtro-item">
+        <div class="form-group">
             <label for="nome">Nome Ricetta:</label>
             <input type="text" id="nome" name="nome" value="{{ nome_selezionato }}">
         </div>
 
-        <div class="filtro-item">
+        <div class="form-group">
             <label for="tipo">Tipo Piatto:</label>
             <select name="tipo" id="tipo">
                 <option value="">Tutti</option>
@@ -23,7 +31,7 @@
             </select>
         </div>
 
-        <div class="filtro-item">
+        <div class="form-group">
             <label for="regione">Regione:</label>
             <select name="regione" id="regione">
                 <option value="">Tutte</option>
@@ -35,7 +43,7 @@
             </select>
         </div>
 
-        <div class="filtro-item">
+        <div class="form-group">
             <label for="libro">Ricettario:</label>
             <select name="libro" id="libro">
                 <option value="">Tutti</option>
@@ -75,22 +83,36 @@
                         {{ ricetta.titolo }}
                     </a>
                 </td>
-                <td>{{ ricetta.get_tipo_display }}</td>
+                <td>{{ ricetta.get_tipo_display|default_if_none:"-" }}</td>
                 <td>
-                    {% for regione in ricetta.regioni.all %}
-                        {{ regione.nome }}{% if not forloop.last %}, {% endif %}
+                    {% for regione_ass in ricetta.ricettaregionale_set.all %}
+                        {{ regione_ass.regione.nome }}{% if not forloop.last %}, {% endif %}
                     {% empty %}
                         <em>-</em>
                     {% endfor %}
                 </td>
+                
                 <td>
-                    {% for pagina in ricetta.pubblicata_in.all %}
-                        {{ pagina.libro.titolo }} (Pag. {{ pagina.numeroPagina }})
-                        {% if not forloop.last %}<br>{% endif %}
-                    {% empty %}
-                        <em>Non pubblicata</em>
-                    {% endfor %}
+                    {% if libro_selezionato %}
+                        
+                        {% for pagina in ricetta.pubblicata_in.all %}
+                            {% if pagina.libro.codISBN == libro_selezionato %}
+                                (Pag. {{ pagina.numeroPagina }})
+                            {% endif %}
+                        {% endfor %}
+
+                    {% else %}
+
+                        {% for pagina in ricetta.pubblicata_in.all %}
+                            {{ pagina.libro.titolo }} (Pag. {{ pagina.numeroPagina }})
+                            {% if not forloop.last %}<br>{% endif %}
+                        {% empty %}
+                            <em>Non pubblicata</em>
+                        {% endfor %}
+                        
+                    {% endif %}
                 </td>
+                
             </tr>
             {% empty %}
             <tr>

@@ -55,8 +55,7 @@ def elenco_ricette_view(request):
 
     if libro_selezionato:
         # Filtra per libro, attraversando la tabella intermedia RicettaPubblicata
-        lista_ricette = lista_ricette.filter(ricettapubblicata__libro__codISBN=libro_selezionato)
-    
+         lista_ricette = lista_ricette.filter(pubblicata_in__libro__codISBN=libro_selezionato)   
     # 4. Prepara il context completo per il template
     context = {
         'lista_ricette': lista_ricette,

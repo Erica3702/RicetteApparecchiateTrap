@@ -8,7 +8,7 @@ class Regione(models.Model):
         return self.nome
 
 class Libro(models.Model):
-    codISBN = models.CharField(max_length=13, primary_key=True)
+    codISBN = models.CharField(max_length=13, unique=True, primary_key=True)
     titolo = models.CharField(max_length=200)
     anno = models.IntegerField()
 

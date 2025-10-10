@@ -11,7 +11,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* HEADER CON IMMAGINE (SOLO PER LA HOME) */
+/* HEADER CON IMMAGINE */
 .hero-header {
     height: 100vh;
     background-image: url('../images/background_header.png'); 
@@ -34,38 +34,35 @@ body {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* ========== MODIFICA CHIAVE PER LE LINEE DORATE ========== */
 
-/* Rendo le colonne "contenitori" per le linee */
 .vertical-divider-right,
 .vertical-divider-left {
-    position: relative; /* Indispensabile per posizionare le linee */
+    position: relative; 
 }
 
-/* Linea dorata a DESTRA della sidebar */
+/* Linea dorata a destra della sidebar */
 .vertical-divider-right::after {
     content: '';
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    height: 75%; /* Altezza della linea */
+    height: 75%; 
     width: 2px;
     background-color: #b89f62;
 }
 
-/* Linea dorata a SINISTRA della colonna vuota */
+/* Linea dorata a sinistra della colonna vuota */
 .vertical-divider-left::before {
     content: '';
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    height: 75%; /* Altezza della linea */
+    height: 75%; 
     width: 2px;
     background-color: #b89f62;
 }
-/* ======================================================== */
 
 .sidebar-content {
     position: sticky;
@@ -76,9 +73,9 @@ body {
     margin-bottom: 2rem;
 }
 
-/* ELEMENTI INTERNI (NAVIGAZIONE, CARD, ECC) */
+/* ELEMENTI INTERNI */
 .main-nav ul { list-style-type: none; margin-top: 0.4rem; padding: 0; }
-.main-nav ul li { margin-bottom: 0.8rem; }
+.main-nav ul li { margin-bottom: 0.2rem; }
 .main-nav ul li a {
     color: #f2f2f2;
     text-decoration: none;
@@ -93,12 +90,20 @@ body {
     margin-bottom: 0.5rem;
 }
 .main-nav ul li a:hover { color: #b89f62; }
-.submenu { list-style-type: none; padding-left: 1rem; margin-top: 0rem; }
+
+.submenu { 
+    list-style-type: none; 
+    padding-left: 1rem; 
+    margin-top: 0rem;     
+    display: none;
+}
+ 
 .submenu li a {
     font-size: 0.9rem;
     font-weight: normal; 
     margin-bottom: 0.5rem;
 }
+
 
 /* STILE STATISTICHE */
 .statistiche-container { 
@@ -157,7 +162,7 @@ body {
     border-top: 1px solid #b89f62;
 }
 
-/* Stile per i form CRUD */
+/* Stile per i form crud */
 .form-crud { max-width: 80%; margin: 0 auto; }
 .form-group { margin-bottom: 1.5rem; }
 .form-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; color: #b89f62; }
@@ -241,25 +246,23 @@ body {
 .filter-form h4 {
     font-family: 'Sorts Mill Goudy', serif;
     font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     color: #f2f2f2;
 }
-.filter-form .form-group { margin-bottom: 1rem; }
+.filter-form .form-group { margin-bottom: 0.7rem; }
 .filter-form label { display: block; margin-bottom: 0.5rem; font-size: 0.9rem; font-weight: bold; }
 .filter-form input[type="text"], .filter-form select { width: 100%; padding: 0.75rem; background-color: #1f1f1f; border: 1px solid #555; border-radius: 5px; color: #f2f2f2; font-family: 'Montserrat', sans-serif; }
-.filter-form .button-group { margin-top: 1.5rem; display: flex; gap: 1rem; }
+.filter-form .button-group { margin-top: 1rem; display: flex; gap: 1rem; }
 
 
-/* ======================================================== */
-/* == STILE PER I MESSAGGI DI NOTIFICA (DJANGO MESSAGES) == */
-/* ======================================================== */
+
+/* STILE PER I MESSAGGI DI NOTIFICA */
 
 .messages {
     list-style: none;
     padding: 0;
-    /* Imposto la larghezza massima per allinearsi con i form */
     max-width: 80%; 
-    margin: 0 auto 2rem auto; /* Centra il blocco e aggiunge spazio sotto */
+    margin: 0 auto 2rem auto; 
 }
 
 .messages li {
@@ -292,9 +295,40 @@ body {
     border-color: #ffeeba;
 }
 
-/* Banner blu per messaggi informativi */
-.messages li.info {
-    color: #0c5460;
-    background-color: #d1ecf1;
-    border-color: #bee5eb;
+
+/* STILE PER RICETTE APPREZZATE (HOME) */
+.ricette-apprezzate {
+    margin-bottom: 4rem; 
+}
+
+.ricette-container {
+    display: flex;
+    justify-content: center; /* Centra le card orizzontalmente */
+    gap: 2rem; /* Spazio tra le card */
+    flex-wrap: wrap; /* Permette alle card di andare a capo su schermi piccoli */
+    text-align: center;
+}
+
+.ricetta-card {
+    width: 250px; /* Larghezza fissa per ogni card */
+}
+
+.ricetta-card img {
+    width: 100%;
+    height: 180px; /* Altezza fissa per uniformare le immagini */
+    object-fit: cover; /* Evita che l'immagine si deformi */
+    border-radius: 8px; /* Angoli leggermente arrotondati */
+    border: 2px solid #333; /* Bordo sottile opzionale */
+    transition: transform 0.3s ease;
+}
+
+.ricetta-card img:hover {
+    transform: scale(1.05); /* Leggero zoom al passaggio del mouse */
+}
+
+.ricetta-card p {
+    margin-top: 0.8rem;
+    font-weight: bold;
+    color: #e4e0e0;
+    font-size: 1rem;
 }

@@ -1,7 +1,4 @@
-# ricette/forms.py
-
 from django import forms
-# Assicurati di importare tutti i modelli necessari
 from .models import Libro, Regione, Ricetta 
 
 # Form per la CREAZIONE e MODIFICA di un Libro
@@ -20,9 +17,37 @@ class LibroForm(forms.ModelForm):
             'anno': forms.NumberInput(attrs={'required': True, 'min': 1000, 'max': 2099, 'class': 'form-control'}),
         }
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Questa parte rimane utile per l'interfaccia utente,
+        # rende il campo non editabile nella pagina di modifica.
+        if self.instance and self.instance.pk:
+            self.fields['codISBN'].disabled = True
+
+    def clean_codISBN(self):
+        """
+        Metodo di validazione che gestisce correttamente sia la creazione che la modifica.
+        """
+        # Recupera il codice ISBN dai dati del form
+        codice = self.cleaned_data.get('codISBN')
+        
+        # Costruisce la query base per cercare duplicati
+        queryset = Libro.objects.filter(codISBN=codice)
+        
+        # SE STIAMO MODIFICANDO, escludiamo il libro corrente dal controllo
+        if self.instance and self.instance.pk:
+            queryset = queryset.exclude(pk=self.instance.pk)
+        
+        # Se, dopo aver escluso il libro corrente, la query trova ancora qualcosa,
+        # significa che un ALTRO libro ha lo stesso ISBN.
+        if queryset.exists():
+            raise forms.ValidationError("Attenzione: un altro libro è già registrato con questo codice ISBN.")
+            
+        return codice
+    
 # --------------------------------------------------------------------
 
-# Form per FILTRARE l'elenco delle Ricette (aggiungi questo!)
+# Form per FILTRARE l'elenco delle Ricette
 class RicettaFilterForm(forms.Form):
     filtro_nome = forms.CharField(
         required=False, 
